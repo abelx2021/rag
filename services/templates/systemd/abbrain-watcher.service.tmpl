@@ -1,0 +1,17 @@
+[Unit]
+Description=AB-Brain vault watcher (FAISS index + knowledge graph)
+After=network-online.target
+
+[Service]
+Type=simple
+Environment=ABBRAIN_HOME=__ABBRAIN_HOME__
+Environment=PATH=__ABBRAIN_VENV_BIN__:__LOCAL_BIN__:/usr/local/bin:/usr/bin:/bin
+WorkingDirectory=__ABBRAIN_HOME__
+ExecStart=__ABBRAIN_PYTHON__ -m abbrain --config __ABBRAIN_CONFIG__ watch
+Restart=always
+RestartSec=10
+StandardOutput=append:__ABBRAIN_HOME__/logs/watcher.log
+StandardError=append:__ABBRAIN_HOME__/logs/watcher.log
+
+[Install]
+WantedBy=default.target

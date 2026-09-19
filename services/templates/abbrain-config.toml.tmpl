@@ -1,0 +1,65 @@
+# AB-Brain configuration — the ONLY file that may contain an absolute vault path.
+# One AB-Brain covers every vault listed here: each vault gets its own index, graph,
+# state database and job queue, namespaced by `name`.
+__VAULT_BLOCKS__
+
+
+[corpus]
+# Knowledge objects that are indexed and graphed (vault-relative globs).
+# raw/**/*.md is included so saved chat transcripts are searchable by meaning, not
+# only by keyword; the ianus vault has no markdown there, so it is unaffected.
+include = ["wiki/**/*.md", "raw/**/*.md"]
+# Navigation / state / derived material: never indexed, never graphed (§11, §24).
+exclude = ["index.md", "log.md", ".obsidian/**", ".trash/**", "_archive/**"]
+# A source (raw/) file that is in the corpus may trigger its own re-index.
+embed_sources = true
+
+[index]
+embedding_backend = "ollama"
+embedding_model = "embeddinggemma:latest"
+embedding_model_version = "ollama-0.33.3"
+ollama_url = "http://127.0.0.1:11434"
+chunk_max_chars = 1500
+batch_size = 16
+
+[graph]
+backend = "graphify-library"
+graphify_pin = "0.9.62"
+external_cli = ""
+max_depth = 2
+max_nodes = 50
+max_edges = 80
+
+[jobs]
+max_attempts = 3
+
+[watcher]
+poll_seconds = 2
+stable_polls = 2
+respect_ingest_lock = true
+
+[retrieval]
+# What a query may assemble — this is what decides the token bill:
+#   summaries : catalogue + one-paragraph summaries only (no embeddings, no full text)
+#   chunks    : summaries + top FAISS chunks, each capped by item_max_chars  (default)
+#   auto      : escalate through whole sections only when the cheap levels cannot cover
+#   sections  : always assemble whole sections (most tokens; `abbrain retrieve --full`)
+evidence = "chunks"
+item_max_chars = 600
+context_budget_chars = 12000
+semantic_min_keyword_hits = 1
+
+[privacy]
+never_upload = true
+
+[server]
+host = "127.0.0.1"
+port = 8777      # 8765/8766 are other local tools; AB-Brain keeps its own port
+
+[llm]
+# Only /api/ask needs this. The key is read from the environment variable named here, or
+# from api_key_file (a .env-style file) if the variable is not exported.
+base_url = "https://api.deepseek.com/v1"
+model = "deepseek-chat"
+api_key_env = "DEEPSEEK_API_KEY"
+api_key_file = "~/.hermes/.env"

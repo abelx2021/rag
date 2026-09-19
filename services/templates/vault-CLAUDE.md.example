@@ -1,0 +1,12 @@
+# Vault: ianus
+
+This vault is a knowledge domain about **ianus work project**.
+
+Shared conventions and the full ingest/query/lint workflows live in the parent schema at
+`~/knowledge/CLAUDE.md` — follow it for everything unless this file overrides it.
+
+## Domain notes
+
+- **Subject:** ianus work project
+- **Emphasis:** architecture and integration decisions; instance isolation; PUC RGS interoperability; traceable requirement identifiers (REQ-*, SEC-*, INT-*, NFR-*, DEC-*, RSK-*, EP-*).
+- **Naming:** pages in English kebab-case; keep requirement/decision/risk IDs verbatim.

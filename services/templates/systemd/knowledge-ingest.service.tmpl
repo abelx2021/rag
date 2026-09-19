@@ -1,0 +1,16 @@
+[Unit]
+Description=LLM-Wiki ingest watcher (raw/ -> wiki, via a headless agent CLI)
+Documentation=file:__KNOWLEDGE_ROOT__/CLAUDE.md
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=__KNOWLEDGE_ROOT__
+ExecStart=/bin/bash __KNOWLEDGE_ROOT__/.claude/ingest-watch.sh
+Restart=always
+RestartSec=10
+StandardOutput=append:__KNOWLEDGE_ROOT__/.claude/ingest-watch.log
+StandardError=append:__KNOWLEDGE_ROOT__/.claude/ingest-watch.log
+
+[Install]
+WantedBy=default.target
