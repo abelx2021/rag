@@ -1,0 +1,5 @@
+# derived index cache - rebuildable from the wiki by load_wiki(); never commit it
+.index/
+__pycache__/
+*.pyc
+.DS_Store

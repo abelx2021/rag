@@ -1,0 +1,69 @@
+{
+ "notes": "Ground truth is recorded in two layers. 'expect' = the chunks that contain the answer material (the ORIGINAL chunk-location ground truth, kept unchanged for historical comparison). 'vault_can_answer' = whether the indexed corpus can actually support the requested answer (the CURRENT benchmark definition). Default when absent: true. Type 'absent' questions are unanswerable by construction. Current split: 35 answerable + 5 unanswerable.",
+ "reclassification": {
+  "rule": "A question counts as answerable only if the indexed corpus can support the requested answer. Retrieving the topically correct page is NOT sufficient: that was an artifact of a chunk-location ground truth. Conversely, a brief but genuine definition IS sufficient - a short answer can be supported by a short definition, and the absence of a dedicated page is a documentation-quality problem, not unanswerability.",
+  "history": "During the v3 run, i01 and o03 were both marked unanswerable. o03 was reverted to answerable once we checked what the corpus actually says: it does define the digital file, briefly ('authorised aggregation of project information'). Only i01 remains unanswerable. Original chunk-location labels are untouched in 'expect'.",
+  "unanswerable": {
+   "i01": {
+    "reason": "The question names the specific numbered requirement INT-PUC-006. The wiki's 'Key rules (INT-PUC-*)' chunk lists the PUC integration rules as prose and contains no requirement identifiers at all; the literal INT-PUC-006 exists only in raw/IANUS_Documento_di_Progetto_Tecnico_Operativo_v1.3.docx, which is not indexed. Information about the family exists, the requested member cannot be identified: insufficient evidence. Ranking that page first was a false hit.",
+    "vault_action": "The compiled page dropped the INT-PUC-* identifiers carried by the raw source; restoring them is a wiki fix, not a retrieval fix."
+   }
+  },
+  "answerable": {
+   "o03": {
+    "reason": "The corpus explicitly defines the digital file, briefly: the module table row 'Digital file | (application view) | Functional | Authorised aggregation of project information', plus the modular plan naming it as a functional module. Sufficient for a brief answer.",
+    "vault_action": "Still a documentation-quality gap (no digital-file page), but not an answerability gap."
+   },
+   "s03": {
+    "reason": "Jointly sufficient: ADR-001 holds the decision, 'Why a single database' holds the reasoning."
+   }
+  }
+ },
+ "questions": [
+  {"id": "d01", "type": "direct", "q": "How does IANUS send monitoring data to RGS?", "expect": ["puc-rgs-regis-snm-connector::Transmission flow"]},
+  {"id": "d02", "type": "direct", "q": "What is the object key format used for stored files?", "expect": ["document-pipeline::Data / file separation"]},
+  {"id": "d03", "type": "direct", "q": "What are the steps of the document upload pipeline?", "expect": ["document-pipeline::Pipeline"]},
+  {"id": "d04", "type": "direct", "q": "Which schemas make up the IANUS database?", "expect": ["data-model::Organization"]},
+  {"id": "d05", "type": "direct", "q": "What precision are monetary amounts stored with?", "expect": ["data-model::Types, constraints, indices"]},
+  {"id": "d06", "type": "direct", "q": "What is the technology baseline for frontend and backend?", "expect": ["modular-monolith-architecture::Technology baseline"]},
+  {"id": "d07", "type": "direct", "q": "What is the repository structure of the solution?", "expect": ["modular-monolith-architecture::Repository structure"]},
+  {"id": "d08", "type": "direct", "q": "What happens when a module is deactivated?", "expect": ["module-catalog::Activation / deactivation"]},
+  {"id": "d09", "type": "direct", "q": "Which module dependencies are mandatory?", "expect": ["module-catalog::Dependency matrix"]},
+  {"id": "d10", "type": "direct", "q": "What does the technical audit trail record?", "expect": ["audit-trail::Technical audit trail"]},
+  {"id": "d11", "type": "direct", "q": "How are document versions replaced and retained?", "expect": ["document-pipeline::Versions, replacement, retention"]},
+  {"id": "d12", "type": "direct", "q": "Which IAM components does IANUS use?", "expect": ["identity-and-access-management::IAM components"]},
+  {"id": "d13", "type": "direct", "q": "How is instance isolation enforced?", "expect": ["instance-isolation::Enforcement points"]},
+  {"id": "d14", "type": "direct", "q": "What are the nine IANUS modules?", "expect": ["module-catalog::Modules"]},
+  {"id": "d15", "type": "direct", "q": "What tables exist in each database schema?", "expect": ["data-model::Table catalog"]},
+  {"id": "d16", "type": "direct", "q": "What is the architectural decision ADR-001?", "expect": ["modular-monolith-architecture::ADR-001 \u2014 Modular monolith"]},
+
+  {"id": "s01", "type": "synthesis", "q": "What must a new module do about enablement checks in the frontend?", "expect": ["module-creation-checklist::Frontend", "module-creation-checklist::Modularity principles to satisfy", "module-catalog::Modularity principles"]},
+  {"id": "s02", "type": "synthesis", "q": "What are the quality gates a new module must pass?", "expect": ["module-creation-checklist::Quality gates"]},
+  {"id": "s03", "type": "synthesis", "q": "What arguments ruled out a microservices architecture?", "expect": ["modular-monolith-architecture::ADR-001 \u2014 Modular monolith", "ianus-modular-analysis-and-implementation-plan::Architectural proposal"], "note": "Jointly sufficient: ADR-001 holds the decision, 'Why a single database' holds the reasoning. Recovered by the joint-sufficiency instruction."},
+  {"id": "s04", "type": "synthesis", "q": "Why does IANUS use a single database instead of one per module?", "expect": ["modular-monolith-architecture::Why a single database", "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database"]},
+  {"id": "s05", "type": "synthesis", "q": "What data layer rules must a new module follow?", "expect": ["module-creation-checklist::Data layer"]},
+  {"id": "s06", "type": "synthesis", "q": "What are the mandatory architectural principles?", "expect": ["modular-monolith-architecture::Mandatory principles"]},
+
+  {"id": "i01", "type": "id", "q": "What does INT-PUC-006 require?", "expect": ["puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)"], "vault_can_answer": false},
+  {"id": "i02", "type": "id", "q": "What is SEC-IAM-005?", "expect": ["identity-and-access-management::Confirmed approach"], "note": "Control case for the named-artifact clause: the corpus DOES carry the literal identifier SEC-IAM-005, so this must stay ANSWERABLE."},
+  {"id": "i03", "type": "id", "q": "What is risk RSK-04 and how is it mitigated?", "expect": ["instance-isolation::Security and testing"], "note": "Control case: RSK-04 appears literally in the corpus."},
+  {"id": "i04", "type": "id", "q": "Which Sprint 0 decisions must be closed before committing release dates?", "expect": ["ianus-technical-operational-project-document::Delivery and status"], "note": "No identifier is named in the question; the corpus names them in the answer. Must stay ANSWERABLE."},
+  {"id": "i05", "type": "id", "q": "What is DEC-CNF-01?", "expect": ["instance-isolation::The decision", "ianus-technical-operational-project-document::Confirmed decisions"], "note": "Control case: DEC-CNF-01 appears literally."},
+  {"id": "i06", "type": "id", "q": "How many epics does the initial backlog contain?", "expect": ["ianus-technical-operational-project-document::Delivery and status"]},
+
+  {"id": "n01", "type": "numeric", "q": "How many validation codes can a pre-validation return and who is authoritative?", "expect": ["puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)", "puc-rgs-regis-snm-connector::Channels and services"]},
+  {"id": "n02", "type": "numeric", "q": "How many TC sheets are in the context table snapshot?", "expect": ["puc-rgs-regis-snm-connector::Channels and services"]},
+  {"id": "n03", "type": "numeric", "q": "How many information structures does PUC 4.0 describe?", "expect": ["puc-rgs-regis-snm-connector::What it exchanges"]},
+  {"id": "n04", "type": "numeric", "q": "What decimal precision is used for percentages and quantities?", "expect": ["data-model::Types, constraints, indices"]},
+  {"id": "n05", "type": "numeric", "q": "How many phases does the implementation plan have?", "expect": ["ianus-technical-operational-project-document::Delivery and status"]},
+
+  {"id": "o01", "type": "obscure", "q": "Which documents is the IANUS platform specified in?", "expect": ["ianus-platform::Specified in"]},
+  {"id": "o02", "type": "obscure", "q": "What does the vault say about functional audit as opposed to technical audit?", "expect": ["audit-trail::Functional audit", "audit-trail::Technical audit trail"]},
+  {"id": "o03", "type": "obscure", "q": "What is the digital file (fascicolo di progetto) in IANUS?", "expect": ["module-catalog::Modules", "ianus-modular-analysis-and-implementation-plan::Modules"], "note": "Answerable: the corpus gives a brief definition, which is sufficient for a brief answer."},
+
+  {"id": "x01", "type": "absent", "q": "What is the production SLA and uptime target?", "expect": []},
+  {"id": "x02", "type": "absent", "q": "How do I configure the SMTP mail server?", "expect": []},
+  {"id": "x03", "type": "absent", "q": "What are the statuses a project can have in IANUS?", "expect": []},
+  {"id": "x04", "type": "absent", "q": "Who is the product owner for IANUS?", "expect": []}
+ ]
+}

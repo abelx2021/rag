@@ -1,0 +1,5108 @@
+{
+ "records": [
+  {
+   "id": "d01",
+   "type": "direct",
+   "q": "How does IANUS send monitoring data to RGS?",
+   "expect": [
+    "puc-rgs-regis-snm-connector::Transmission flow"
+   ],
+   "seed": "ianus-platform",
+   "vector_top10": [
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.5606
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.5498
+    },
+    {
+     "key": "identity-and-access-management::Introduction",
+     "score": 0.5405
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Introduction",
+     "score": 0.523
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.5191
+    },
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "score": 0.5101
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.508
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.5067
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.5052
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::What it exchanges",
+     "score": 0.5001
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "identity-and-access-management::Introduction",
+     "score": 0.5405
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Introduction",
+     "score": 0.523
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.508
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.5052
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::What it exchanges",
+     "score": 0.5001
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "score": 0.4945
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.4843
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Related",
+     "score": 0.4828
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4798
+    },
+    {
+     "key": "data-model::Introduction",
+     "score": 0.4755
+    }
+   ],
+   "merged_count": 15,
+   "rerank_raw": "10,3,9",
+   "rerank_indices": [
+    10,
+    3,
+    9
+   ],
+   "final3": [
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "source": "graph",
+     "score": 0.4945,
+     "rerank_input_rank": 11
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Introduction",
+     "source": "vector",
+     "score": 0.523,
+     "rerank_input_rank": 4
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::What it exchanges",
+     "source": "vector",
+     "score": 0.5001,
+     "rerank_input_rank": 10
+    }
+   ],
+   "vec_best_rank": null,
+   "graph_hit": true,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.5606,
+   "vec_hit": false,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": true
+  },
+  {
+   "id": "d02",
+   "type": "direct",
+   "q": "What is the object key format used for stored files?",
+   "expect": [
+    "document-pipeline::Data / file separation"
+   ],
+   "seed": "document-pipeline",
+   "vector_top10": [
+    {
+     "key": "document-pipeline::Data / file separation",
+     "score": 0.5975
+    },
+    {
+     "key": "document-pipeline::Introduction",
+     "score": 0.5446
+    },
+    {
+     "key": "data-model::Common columns and ownership",
+     "score": 0.4329
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.4241
+    },
+    {
+     "key": "document-pipeline::Pipeline",
+     "score": 0.4227
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)",
+     "score": 0.4209
+    },
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "score": 0.4127
+    },
+    {
+     "key": "modular-monolith-architecture::Repository structure",
+     "score": 0.3951
+    },
+    {
+     "key": "audit-trail::Technical audit trail",
+     "score": 0.3925
+    },
+    {
+     "key": "instance-isolation::The decision",
+     "score": 0.3896
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "data-model::Common columns and ownership",
+     "score": 0.4329
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.4241
+    },
+    {
+     "key": "instance-isolation::The decision",
+     "score": 0.3896
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.3868
+    },
+    {
+     "key": "data-model::Organization",
+     "score": 0.3859
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.3775
+    },
+    {
+     "key": "data-model::Transactions and migrations",
+     "score": 0.3561
+    },
+    {
+     "key": "data-model::Related",
+     "score": 0.3517
+    },
+    {
+     "key": "instance-isolation::Enforcement points",
+     "score": 0.348
+    },
+    {
+     "key": "data-model::Introduction",
+     "score": 0.3457
+    }
+   ],
+   "merged_count": 17,
+   "rerank_raw": "0,4,6",
+   "rerank_indices": [
+    0,
+    4,
+    6
+   ],
+   "final3": [
+    {
+     "key": "document-pipeline::Data / file separation",
+     "source": "vector",
+     "score": 0.5975,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "document-pipeline::Pipeline",
+     "source": "vector",
+     "score": 0.4227,
+     "rerank_input_rank": 5
+    },
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "source": "vector",
+     "score": 0.4127,
+     "rerank_input_rank": 7
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.5975,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "d03",
+   "type": "direct",
+   "q": "What are the steps of the document upload pipeline?",
+   "expect": [
+    "document-pipeline::Pipeline"
+   ],
+   "seed": "document-pipeline",
+   "vector_top10": [
+    {
+     "key": "document-pipeline::Pipeline",
+     "score": 0.7977
+    },
+    {
+     "key": "document-pipeline::Data / file separation",
+     "score": 0.6232
+    },
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "score": 0.6002
+    },
+    {
+     "key": "document-pipeline::Introduction",
+     "score": 0.5747
+    },
+    {
+     "key": "document-pipeline::Related",
+     "score": 0.5566
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "score": 0.5363
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.4999
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4978
+    },
+    {
+     "key": "ianus-platform::Lifecycle",
+     "score": 0.4802
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.4648
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.4999
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4978
+    },
+    {
+     "key": "ianus-platform::Lifecycle",
+     "score": 0.4802
+    },
+    {
+     "key": "data-model::Related",
+     "score": 0.4534
+    },
+    {
+     "key": "data-model::Transactions and migrations",
+     "score": 0.4398
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.4392
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.4361
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.4276
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.4147
+    },
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "score": 0.3928
+    }
+   ],
+   "merged_count": 17,
+   "rerank_raw": "0,3,1",
+   "rerank_indices": [
+    0,
+    3,
+    1
+   ],
+   "final3": [
+    {
+     "key": "document-pipeline::Pipeline",
+     "source": "vector",
+     "score": 0.7977,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "document-pipeline::Introduction",
+     "source": "vector",
+     "score": 0.5747,
+     "rerank_input_rank": 4
+    },
+    {
+     "key": "document-pipeline::Data / file separation",
+     "source": "vector",
+     "score": 0.6232,
+     "rerank_input_rank": 2
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.7977,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "d04",
+   "type": "direct",
+   "q": "Which schemas make up the IANUS database?",
+   "expect": [
+    "data-model::Organization"
+   ],
+   "seed": "data-model",
+   "vector_top10": [
+    {
+     "key": "data-model::Introduction",
+     "score": 0.7238
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "score": 0.6893
+    },
+    {
+     "key": "data-model::Organization",
+     "score": 0.6643
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.6363
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.6345
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.6316
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.6294
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.6145
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.6077
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.6021
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "score": 0.6893
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.6345
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.6316
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.6145
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.6077
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.596
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.5828
+    },
+    {
+     "key": "identity-and-access-management::Introduction",
+     "score": 0.5798
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+     "score": 0.5748
+    },
+    {
+     "key": "instance-isolation::Introduction",
+     "score": 0.5624
+    }
+   ],
+   "merged_count": 15,
+   "rerank_raw": "1,2,7",
+   "rerank_indices": [
+    1,
+    2,
+    7
+   ],
+   "final3": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "source": "vector",
+     "score": 0.6893,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "data-model::Organization",
+     "source": "vector",
+     "score": 0.6643,
+     "rerank_input_rank": 3
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "source": "vector",
+     "score": 0.6145,
+     "rerank_input_rank": 8
+    }
+   ],
+   "vec_best_rank": 3,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.7238,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "d05",
+   "type": "direct",
+   "q": "What precision are monetary amounts stored with?",
+   "expect": [
+    "data-model::Types, constraints, indices"
+   ],
+   "seed": "data-model",
+   "vector_top10": [
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.5375
+    },
+    {
+     "key": "document-pipeline::Data / file separation",
+     "score": 0.416
+    },
+    {
+     "key": "document-pipeline::Introduction",
+     "score": 0.4148
+    },
+    {
+     "key": "data-model::Transactions and migrations",
+     "score": 0.4054
+    },
+    {
+     "key": "audit-trail::Technical audit trail",
+     "score": 0.4033
+    },
+    {
+     "key": "data-model::Introduction",
+     "score": 0.4018
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "score": 0.4004
+    },
+    {
+     "key": "data-model::Organization",
+     "score": 0.3999
+    },
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "score": 0.3994
+    },
+    {
+     "key": "modular-monolith-architecture::Why a single database",
+     "score": 0.3993
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "document-pipeline::Data / file separation",
+     "score": 0.416
+    },
+    {
+     "key": "document-pipeline::Introduction",
+     "score": 0.4148
+    },
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "score": 0.3994
+    },
+    {
+     "key": "modular-monolith-architecture::Why a single database",
+     "score": 0.3993
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.3991
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.3968
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.3903
+    },
+    {
+     "key": "identity-and-access-management::Confirmed approach",
+     "score": 0.3903
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.3891
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.377
+    }
+   ],
+   "merged_count": 16,
+   "rerank_raw": "0,5,7",
+   "rerank_indices": [
+    0,
+    5,
+    7
+   ],
+   "final3": [
+    {
+     "key": "data-model::Types, constraints, indices",
+     "source": "vector",
+     "score": 0.5375,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "data-model::Introduction",
+     "source": "vector",
+     "score": 0.4018,
+     "rerank_input_rank": 6
+    },
+    {
+     "key": "data-model::Organization",
+     "source": "vector",
+     "score": 0.3999,
+     "rerank_input_rank": 8
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.5375,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "d06",
+   "type": "direct",
+   "q": "What is the technology baseline for frontend and backend?",
+   "expect": [
+    "modular-monolith-architecture::Technology baseline"
+   ],
+   "seed": "modular-monolith-architecture",
+   "vector_top10": [
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.6372
+    },
+    {
+     "key": "module-creation-checklist::Frontend",
+     "score": 0.5188
+    },
+    {
+     "key": "module-creation-checklist::Backend",
+     "score": 0.5178
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Common technical activities",
+     "score": 0.4987
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.4949
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.4747
+    },
+    {
+     "key": "module-catalog::Activation / deactivation",
+     "score": 0.4435
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.4428
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.4408
+    },
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "score": 0.4314
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Common technical activities",
+     "score": 0.4987
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.4949
+    },
+    {
+     "key": "module-catalog::Activation / deactivation",
+     "score": 0.4435
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.4428
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.4408
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.4293
+    },
+    {
+     "key": "data-model::Introduction",
+     "score": 0.428
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.4223
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4214
+    },
+    {
+     "key": "ianus-platform::Scope and actors",
+     "score": 0.4196
+    }
+   ],
+   "merged_count": 15,
+   "rerank_raw": "0,4,3",
+   "rerank_indices": [
+    0,
+    4,
+    3
+   ],
+   "final3": [
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "source": "vector",
+     "score": 0.6372,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "source": "vector",
+     "score": 0.4949,
+     "rerank_input_rank": 5
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Common technical activities",
+     "source": "vector",
+     "score": 0.4987,
+     "rerank_input_rank": 4
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.6372,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "d07",
+   "type": "direct",
+   "q": "What is the repository structure of the solution?",
+   "expect": [
+    "modular-monolith-architecture::Repository structure"
+   ],
+   "seed": "modular-monolith-architecture",
+   "vector_top10": [
+    {
+     "key": "modular-monolith-architecture::Repository structure",
+     "score": 0.6578
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.5361
+    },
+    {
+     "key": "document-pipeline::Data / file separation",
+     "score": 0.5198
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "score": 0.518
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.5168
+    },
+    {
+     "key": "module-creation-checklist::Data layer",
+     "score": 0.5098
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.5088
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.5058
+    },
+    {
+     "key": "data-model::Common columns and ownership",
+     "score": 0.5052
+    },
+    {
+     "key": "module-catalog::Related",
+     "score": 0.5052
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.5361
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.5058
+    },
+    {
+     "key": "data-model::Common columns and ownership",
+     "score": 0.5052
+    },
+    {
+     "key": "module-catalog::Related",
+     "score": 0.5052
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "score": 0.5003
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.4972
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.4876
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.4818
+    },
+    {
+     "key": "data-model::Organization",
+     "score": 0.4783
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.4779
+    }
+   ],
+   "merged_count": 16,
+   "rerank_raw": "0,3,4",
+   "rerank_indices": [
+    0,
+    3,
+    4
+   ],
+   "final3": [
+    {
+     "key": "modular-monolith-architecture::Repository structure",
+     "source": "vector",
+     "score": 0.6578,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "source": "vector",
+     "score": 0.518,
+     "rerank_input_rank": 4
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "source": "vector",
+     "score": 0.5168,
+     "rerank_input_rank": 5
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.6578,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "d08",
+   "type": "direct",
+   "q": "What happens when a module is deactivated?",
+   "expect": [
+    "module-catalog::Activation / deactivation"
+   ],
+   "seed": "module-catalog",
+   "vector_top10": [
+    {
+     "key": "module-catalog::Activation / deactivation",
+     "score": 0.7495
+    },
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "score": 0.673
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.6678
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.6558
+    },
+    {
+     "key": "module-creation-checklist::Backend",
+     "score": 0.6386
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.6343
+    },
+    {
+     "key": "module-creation-checklist::Quality gates",
+     "score": 0.6217
+    },
+    {
+     "key": "module-creation-checklist::What a module is",
+     "score": 0.6084
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.5321
+    },
+    {
+     "key": "module-creation-checklist::Data layer",
+     "score": 0.5053
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.6343
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "score": 0.5042
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.4883
+    },
+    {
+     "key": "modular-monolith-architecture::Why a single database",
+     "score": 0.4421
+    },
+    {
+     "key": "audit-trail::Functional audit",
+     "score": 0.4398
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.4365
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.4279
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.4264
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+     "score": 0.421
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.4179
+    }
+   ],
+   "merged_count": 19,
+   "rerank_raw": "0,1,2",
+   "rerank_indices": [
+    0,
+    1,
+    2
+   ],
+   "final3": [
+    {
+     "key": "module-catalog::Activation / deactivation",
+     "source": "vector",
+     "score": 0.7495,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "source": "vector",
+     "score": 0.673,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "source": "vector",
+     "score": 0.6678,
+     "rerank_input_rank": 3
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.7495,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "d09",
+   "type": "direct",
+   "q": "Which module dependencies are mandatory?",
+   "expect": [
+    "module-catalog::Dependency matrix"
+   ],
+   "seed": "module-catalog",
+   "vector_top10": [
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.6946
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "score": 0.5994
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.5964
+    },
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "score": 0.5962
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.5893
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "score": 0.5886
+    },
+    {
+     "key": "module-creation-checklist::What a module is",
+     "score": 0.5813
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.5684
+    },
+    {
+     "key": "module-creation-checklist::Data layer",
+     "score": 0.5674
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.5503
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "score": 0.5886
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.5684
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.5503
+    },
+    {
+     "key": "modular-monolith-architecture::Repository structure",
+     "score": 0.5342
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.5282
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.5082
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.4841
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.4803
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.4704
+    },
+    {
+     "key": "modular-monolith-architecture::Related",
+     "score": 0.4683
+    }
+   ],
+   "merged_count": 17,
+   "rerank_raw": "0,5,2",
+   "rerank_indices": [
+    0,
+    5,
+    2
+   ],
+   "final3": [
+    {
+     "key": "module-catalog::Dependency matrix",
+     "source": "vector",
+     "score": 0.6946,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "source": "vector",
+     "score": 0.5886,
+     "rerank_input_rank": 6
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "source": "vector",
+     "score": 0.5964,
+     "rerank_input_rank": 3
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.6946,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "d10",
+   "type": "direct",
+   "q": "What does the technical audit trail record?",
+   "expect": [
+    "audit-trail::Technical audit trail"
+   ],
+   "seed": "audit-trail",
+   "vector_top10": [
+    {
+     "key": "audit-trail::Technical audit trail",
+     "score": 0.7366
+    },
+    {
+     "key": "audit-trail::Introduction",
+     "score": 0.7055
+    },
+    {
+     "key": "module-creation-checklist::Audit and observability",
+     "score": 0.6567
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Audit",
+     "score": 0.6553
+    },
+    {
+     "key": "audit-trail::Functional audit",
+     "score": 0.6318
+    },
+    {
+     "key": "audit-trail::Relationship to the rest of the system",
+     "score": 0.6264
+    },
+    {
+     "key": "audit-trail::Related",
+     "score": 0.6064
+    },
+    {
+     "key": "module-creation-checklist::Related",
+     "score": 0.5086
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.4756
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Common technical activities",
+     "score": 0.4621
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Audit",
+     "score": 0.6553
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.4756
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Common technical activities",
+     "score": 0.4621
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.4506
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Related",
+     "score": 0.4445
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Access types",
+     "score": 0.4445
+    },
+    {
+     "key": "data-model::Common columns and ownership",
+     "score": 0.4274
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.423
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.4227
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.4207
+    }
+   ],
+   "merged_count": 17,
+   "rerank_raw": "0,2,1",
+   "rerank_indices": [
+    0,
+    2,
+    1
+   ],
+   "final3": [
+    {
+     "key": "audit-trail::Technical audit trail",
+     "source": "vector",
+     "score": 0.7366,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "module-creation-checklist::Audit and observability",
+     "source": "vector",
+     "score": 0.6567,
+     "rerank_input_rank": 3
+    },
+    {
+     "key": "audit-trail::Introduction",
+     "source": "vector",
+     "score": 0.7055,
+     "rerank_input_rank": 2
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.7366,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "d11",
+   "type": "direct",
+   "q": "How are document versions replaced and retained?",
+   "expect": [
+    "document-pipeline::Versions, replacement, retention"
+   ],
+   "seed": "document-pipeline",
+   "vector_top10": [
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "score": 0.7633
+    },
+    {
+     "key": "document-pipeline::Introduction",
+     "score": 0.5557
+    },
+    {
+     "key": "document-pipeline::Data / file separation",
+     "score": 0.5401
+    },
+    {
+     "key": "document-pipeline::Pipeline",
+     "score": 0.5091
+    },
+    {
+     "key": "document-pipeline::Related",
+     "score": 0.4945
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4669
+    },
+    {
+     "key": "data-model::Related",
+     "score": 0.4411
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.4407
+    },
+    {
+     "key": "data-model::Transactions and migrations",
+     "score": 0.4383
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.4383
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4669
+    },
+    {
+     "key": "data-model::Related",
+     "score": 0.4411
+    },
+    {
+     "key": "data-model::Transactions and migrations",
+     "score": 0.4383
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.4383
+    },
+    {
+     "key": "data-model::Common columns and ownership",
+     "score": 0.4357
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.4315
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.4217
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.406
+    },
+    {
+     "key": "instance-isolation::Enforcement points",
+     "score": 0.4052
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.3971
+    }
+   ],
+   "merged_count": 16,
+   "rerank_raw": "0,3,2",
+   "rerank_indices": [
+    0,
+    3,
+    2
+   ],
+   "final3": [
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "source": "vector",
+     "score": 0.7633,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "document-pipeline::Pipeline",
+     "source": "vector",
+     "score": 0.5091,
+     "rerank_input_rank": 4
+    },
+    {
+     "key": "document-pipeline::Data / file separation",
+     "source": "vector",
+     "score": 0.5401,
+     "rerank_input_rank": 3
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.7633,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "d12",
+   "type": "direct",
+   "q": "Which IAM components does IANUS use?",
+   "expect": [
+    "identity-and-access-management::IAM components"
+   ],
+   "seed": "identity-and-access-management",
+   "vector_top10": [
+    {
+     "key": "identity-and-access-management::Introduction",
+     "score": 0.7921
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.6743
+    },
+    {
+     "key": "identity-and-access-management::IAM components",
+     "score": 0.6403
+    },
+    {
+     "key": "ianus-platform::Scope and actors",
+     "score": 0.6338
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.6276
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.6164
+    },
+    {
+     "key": "identity-and-access-management::Related",
+     "score": 0.611
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Access types",
+     "score": 0.6009
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "score": 0.5997
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.598
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.6743
+    },
+    {
+     "key": "ianus-platform::Scope and actors",
+     "score": 0.6338
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.5964
+    },
+    {
+     "key": "instance-isolation::The decision",
+     "score": 0.5954
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.5941
+    },
+    {
+     "key": "instance-isolation::Introduction",
+     "score": 0.5818
+    },
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "score": 0.5714
+    },
+    {
+     "key": "data-model::Introduction",
+     "score": 0.5709
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.5707
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.5472
+    }
+   ],
+   "merged_count": 18,
+   "rerank_raw": "2,0,16",
+   "rerank_indices": [
+    2,
+    0,
+    16
+   ],
+   "final3": [
+    {
+     "key": "identity-and-access-management::IAM components",
+     "source": "vector",
+     "score": 0.6403,
+     "rerank_input_rank": 3
+    },
+    {
+     "key": "identity-and-access-management::Introduction",
+     "source": "vector",
+     "score": 0.7921,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "source": "graph",
+     "score": 0.5707,
+     "rerank_input_rank": 17
+    }
+   ],
+   "vec_best_rank": 3,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.7921,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": true
+  },
+  {
+   "id": "d13",
+   "type": "direct",
+   "q": "How is instance isolation enforced?",
+   "expect": [
+    "instance-isolation::Enforcement points"
+   ],
+   "seed": "instance-isolation",
+   "vector_top10": [
+    {
+     "key": "instance-isolation::Enforcement points",
+     "score": 0.7416
+    },
+    {
+     "key": "instance-isolation::Security and testing",
+     "score": 0.6904
+    },
+    {
+     "key": "instance-isolation::Introduction",
+     "score": 0.6758
+    },
+    {
+     "key": "instance-isolation::The decision",
+     "score": 0.65
+    },
+    {
+     "key": "instance-isolation::Related",
+     "score": 0.6378
+    },
+    {
+     "key": "identity-and-access-management::Related",
+     "score": 0.5696
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.5381
+    },
+    {
+     "key": "document-pipeline::Related",
+     "score": 0.5003
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.4867
+    },
+    {
+     "key": "data-model::Related",
+     "score": 0.4835
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "identity-and-access-management::Related",
+     "score": 0.5696
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.5381
+    },
+    {
+     "key": "document-pipeline::Related",
+     "score": 0.5003
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.4867
+    },
+    {
+     "key": "data-model::Related",
+     "score": 0.4835
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.4683
+    },
+    {
+     "key": "modular-monolith-architecture::Why a single database",
+     "score": 0.4607
+    },
+    {
+     "key": "data-model::Common columns and ownership",
+     "score": 0.4496
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.448
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4426
+    }
+   ],
+   "merged_count": 15,
+   "rerank_raw": "0,12,1",
+   "rerank_indices": [
+    0,
+    12,
+    1
+   ],
+   "final3": [
+    {
+     "key": "instance-isolation::Enforcement points",
+     "source": "vector",
+     "score": 0.7416,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "data-model::Common columns and ownership",
+     "source": "graph",
+     "score": 0.4496,
+     "rerank_input_rank": 13
+    },
+    {
+     "key": "instance-isolation::Security and testing",
+     "source": "vector",
+     "score": 0.6904,
+     "rerank_input_rank": 2
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.7416,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": true
+  },
+  {
+   "id": "d14",
+   "type": "direct",
+   "q": "What are the nine IANUS modules?",
+   "expect": [
+    "module-catalog::Modules"
+   ],
+   "seed": "module-catalog",
+   "vector_top10": [
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.7815
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "score": 0.7314
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.6918
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.6166
+    },
+    {
+     "key": "module-creation-checklist::Introduction",
+     "score": 0.6126
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.5982
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.5909
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.5861
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "score": 0.5842
+    },
+    {
+     "key": "ianus-platform::Scope and actors",
+     "score": 0.5629
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "score": 0.7314
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.6918
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.6166
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.5982
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.5909
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.5861
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "score": 0.5842
+    },
+    {
+     "key": "ianus-platform::Scope and actors",
+     "score": 0.5629
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.5578
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.5488
+    }
+   ],
+   "merged_count": 12,
+   "rerank_raw": "1,0,7",
+   "rerank_indices": [
+    1,
+    0,
+    7
+   ],
+   "final3": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "source": "vector",
+     "score": 0.7314,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "source": "vector",
+     "score": 0.7815,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "source": "vector",
+     "score": 0.5861,
+     "rerank_input_rank": 8
+    }
+   ],
+   "vec_best_rank": null,
+   "graph_hit": false,
+   "merged_hit": false,
+   "final_hit": false,
+   "best_vector_score": 0.7815,
+   "vec_hit": false,
+   "fail_stage": "retrieval (embedding+graph)",
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "d15",
+   "type": "direct",
+   "q": "What tables exist in each database schema?",
+   "expect": [
+    "data-model::Table catalog"
+   ],
+   "seed": "data-model",
+   "vector_top10": [
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.6219
+    },
+    {
+     "key": "module-creation-checklist::Data layer",
+     "score": 0.5724
+    },
+    {
+     "key": "data-model::Organization",
+     "score": 0.5526
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "score": 0.5248
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.5012
+    },
+    {
+     "key": "data-model::Introduction",
+     "score": 0.499
+    },
+    {
+     "key": "data-model::Common columns and ownership",
+     "score": 0.497
+    },
+    {
+     "key": "instance-isolation::Enforcement points",
+     "score": 0.4872
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.4777
+    },
+    {
+     "key": "modular-monolith-architecture::Why a single database",
+     "score": 0.4698
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "score": 0.5248
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.5012
+    },
+    {
+     "key": "instance-isolation::Enforcement points",
+     "score": 0.4872
+    },
+    {
+     "key": "modular-monolith-architecture::Why a single database",
+     "score": 0.4698
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+     "score": 0.467
+    },
+    {
+     "key": "document-pipeline::Related",
+     "score": 0.4514
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.44
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.423
+    },
+    {
+     "key": "document-pipeline::Data / file separation",
+     "score": 0.4114
+    },
+    {
+     "key": "identity-and-access-management::Related",
+     "score": 0.4109
+    }
+   ],
+   "merged_count": 16,
+   "rerank_raw": "0,2,3",
+   "rerank_indices": [
+    0,
+    2,
+    3
+   ],
+   "final3": [
+    {
+     "key": "data-model::Table catalog",
+     "source": "vector",
+     "score": 0.6219,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "data-model::Organization",
+     "source": "vector",
+     "score": 0.5526,
+     "rerank_input_rank": 3
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "source": "vector",
+     "score": 0.5248,
+     "rerank_input_rank": 4
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.6219,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "d16",
+   "type": "direct",
+   "q": "What is the architectural decision ADR-001?",
+   "expect": [
+    "modular-monolith-architecture::ADR-001 — Modular monolith"
+   ],
+   "seed": "modular-monolith-architecture",
+   "vector_top10": [
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.6014
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.5857
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.5468
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "score": 0.5281
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.4488
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.4353
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.4262
+    },
+    {
+     "key": "instance-isolation::The decision",
+     "score": 0.4122
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.4101
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.408
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.5468
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.4353
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.4262
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.408
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.403
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+     "score": 0.3974
+    },
+    {
+     "key": "data-model::Related",
+     "score": 0.3826
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.3756
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.3737
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.3724
+    }
+   ],
+   "merged_count": 16,
+   "rerank_raw": "0,1,3",
+   "rerank_indices": [
+    0,
+    1,
+    3
+   ],
+   "final3": [
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "source": "vector",
+     "score": 0.6014,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "source": "vector",
+     "score": 0.5857,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "source": "vector",
+     "score": 0.5281,
+     "rerank_input_rank": 4
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.6014,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "s01",
+   "type": "synthesis",
+   "q": "What must a new module do about enablement checks in the frontend?",
+   "expect": [
+    "module-catalog::Modularity principles",
+    "module-creation-checklist::Frontend",
+    "module-creation-checklist::Modularity principles to satisfy"
+   ],
+   "seed": "module-creation-checklist",
+   "vector_top10": [
+    {
+     "key": "module-creation-checklist::Frontend",
+     "score": 0.6852
+    },
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "score": 0.658
+    },
+    {
+     "key": "module-catalog::Activation / deactivation",
+     "score": 0.6427
+    },
+    {
+     "key": "module-creation-checklist::Backend",
+     "score": 0.617
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.6015
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.5912
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.5791
+    },
+    {
+     "key": "module-creation-checklist::What a module is",
+     "score": 0.5676
+    },
+    {
+     "key": "module-creation-checklist::Quality gates",
+     "score": 0.5603
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "score": 0.5556
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "module-catalog::Activation / deactivation",
+     "score": 0.6427
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.6015
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.5912
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.5791
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.5291
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.4916
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Common technical activities",
+     "score": 0.4744
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.4684
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.4638
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.4614
+    }
+   ],
+   "merged_count": 16,
+   "rerank_raw": "1,4,5",
+   "rerank_indices": [
+    1,
+    4,
+    5
+   ],
+   "final3": [
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "source": "vector",
+     "score": 0.658,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "source": "vector",
+     "score": 0.6015,
+     "rerank_input_rank": 5
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "source": "vector",
+     "score": 0.5912,
+     "rerank_input_rank": 6
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": true,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.6852,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "s02",
+   "type": "synthesis",
+   "q": "What are the quality gates a new module must pass?",
+   "expect": [
+    "module-creation-checklist::Quality gates"
+   ],
+   "seed": "module-creation-checklist",
+   "vector_top10": [
+    {
+     "key": "module-creation-checklist::Quality gates",
+     "score": 0.7286
+    },
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "score": 0.6265
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "score": 0.6213
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.6146
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.595
+    },
+    {
+     "key": "module-creation-checklist::What a module is",
+     "score": 0.578
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.5725
+    },
+    {
+     "key": "module-creation-checklist::Introduction",
+     "score": 0.5676
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.5669
+    },
+    {
+     "key": "module-creation-checklist::Data layer",
+     "score": 0.5583
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.6146
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.595
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.5725
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.5669
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.5261
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.5193
+    },
+    {
+     "key": "module-catalog::Activation / deactivation",
+     "score": 0.5192
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "score": 0.4955
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.4794
+    },
+    {
+     "key": "module-catalog::Related",
+     "score": 0.4758
+    }
+   ],
+   "merged_count": 16,
+   "rerank_raw": "0,1,3",
+   "rerank_indices": [
+    0,
+    1,
+    3
+   ],
+   "final3": [
+    {
+     "key": "module-creation-checklist::Quality gates",
+     "source": "vector",
+     "score": 0.7286,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "source": "vector",
+     "score": 0.6265,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "source": "vector",
+     "score": 0.6146,
+     "rerank_input_rank": 4
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.7286,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "s03",
+   "type": "synthesis",
+   "q": "What arguments ruled out a microservices architecture?",
+   "expect": [
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+    "modular-monolith-architecture::ADR-001 — Modular monolith"
+   ],
+   "seed": "modular-monolith-architecture",
+   "vector_top10": [
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.6089
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.5409
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.5311
+    },
+    {
+     "key": "modular-monolith-architecture::Why a single database",
+     "score": 0.5127
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "score": 0.5088
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.4954
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+     "score": 0.4952
+    },
+    {
+     "key": "instance-isolation::Enforcement points",
+     "score": 0.4897
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.4853
+    },
+    {
+     "key": "modular-monolith-architecture::Repository structure",
+     "score": 0.4846
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.4954
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+     "score": 0.4952
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.4853
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.4834
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.4658
+    },
+    {
+     "key": "data-model::Related",
+     "score": 0.4498
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4461
+    },
+    {
+     "key": "data-model::Transactions and migrations",
+     "score": 0.4404
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.4335
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.4257
+    }
+   ],
+   "merged_count": 17,
+   "rerank_raw": "3,6,0",
+   "rerank_indices": [
+    3,
+    6,
+    0
+   ],
+   "final3": [
+    {
+     "key": "modular-monolith-architecture::Why a single database",
+     "source": "vector",
+     "score": 0.5127,
+     "rerank_input_rank": 4
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+     "source": "vector",
+     "score": 0.4952,
+     "rerank_input_rank": 7
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "source": "vector",
+     "score": 0.6089,
+     "rerank_input_rank": 1
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": true,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.6089,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "s04",
+   "type": "synthesis",
+   "q": "Why does IANUS use a single database instead of one per module?",
+   "expect": [
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+    "modular-monolith-architecture::Why a single database"
+   ],
+   "seed": "ianus-modular-analysis-and-implementation-plan",
+   "vector_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+     "score": 0.7738
+    },
+    {
+     "key": "modular-monolith-architecture::Why a single database",
+     "score": 0.7307
+    },
+    {
+     "key": "data-model::Introduction",
+     "score": 0.6725
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.6653
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.6541
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.6535
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.6251
+    },
+    {
+     "key": "instance-isolation::Introduction",
+     "score": 0.6242
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.6161
+    },
+    {
+     "key": "instance-isolation::The decision",
+     "score": 0.6145
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "modular-monolith-architecture::Why a single database",
+     "score": 0.7307
+    },
+    {
+     "key": "data-model::Introduction",
+     "score": 0.6725
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.6653
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.6541
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.6251
+    },
+    {
+     "key": "data-model::Organization",
+     "score": 0.6011
+    },
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "score": 0.5996
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.5908
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.565
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.5619
+    }
+   ],
+   "merged_count": 15,
+   "rerank_raw": "0,1,8",
+   "rerank_indices": [
+    0,
+    1,
+    8
+   ],
+   "final3": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+     "source": "vector",
+     "score": 0.7738,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "modular-monolith-architecture::Why a single database",
+     "source": "vector",
+     "score": 0.7307,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "source": "vector",
+     "score": 0.6161,
+     "rerank_input_rank": 9
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": true,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.7738,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "s05",
+   "type": "synthesis",
+   "q": "What data layer rules must a new module follow?",
+   "expect": [
+    "module-creation-checklist::Data layer"
+   ],
+   "seed": "module-creation-checklist",
+   "vector_top10": [
+    {
+     "key": "module-creation-checklist::Data layer",
+     "score": 0.6878
+    },
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "score": 0.6524
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "score": 0.6508
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.6277
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.6091
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.6071
+    },
+    {
+     "key": "module-creation-checklist::What a module is",
+     "score": 0.5657
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.5595
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.5496
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.5449
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.6277
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.6091
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.6071
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.5595
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.5496
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.5449
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.5246
+    },
+    {
+     "key": "audit-trail::Technical audit trail",
+     "score": 0.5232
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.523
+    },
+    {
+     "key": "data-model::Transactions and migrations",
+     "score": 0.5217
+    }
+   ],
+   "merged_count": 14,
+   "rerank_raw": "0,13,9",
+   "rerank_indices": [
+    0,
+    13,
+    9
+   ],
+   "final3": [
+    {
+     "key": "module-creation-checklist::Data layer",
+     "source": "vector",
+     "score": 0.6878,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "data-model::Transactions and migrations",
+     "source": "graph",
+     "score": 0.5217,
+     "rerank_input_rank": 14
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "source": "vector",
+     "score": 0.5449,
+     "rerank_input_rank": 10
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.6878,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": true
+  },
+  {
+   "id": "s06",
+   "type": "synthesis",
+   "q": "What are the mandatory architectural principles?",
+   "expect": [
+    "modular-monolith-architecture::Mandatory principles"
+   ],
+   "seed": "modular-monolith-architecture",
+   "vector_top10": [
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.694
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "score": 0.5592
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.5479
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.543
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.5337
+    },
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "score": 0.5307
+    },
+    {
+     "key": "modular-monolith-architecture::Repository structure",
+     "score": 0.4918
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.4893
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.4781
+    },
+    {
+     "key": "module-creation-checklist::Data layer",
+     "score": 0.4688
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.5479
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.543
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.4893
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.4684
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.4625
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.4623
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.4598
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.4558
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Common technical activities",
+     "score": 0.4537
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.45
+    }
+   ],
+   "merged_count": 17,
+   "rerank_raw": "0,4,2",
+   "rerank_indices": [
+    0,
+    4,
+    2
+   ],
+   "final3": [
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "source": "vector",
+     "score": 0.694,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "source": "vector",
+     "score": 0.5337,
+     "rerank_input_rank": 5
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "source": "vector",
+     "score": 0.5479,
+     "rerank_input_rank": 3
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.694,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "i01",
+   "type": "id",
+   "q": "What does INT-PUC-006 require?",
+   "expect": [
+    "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)"
+   ],
+   "seed": "ianus-technical-operational-project-document",
+   "vector_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.5263
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)",
+     "score": 0.5173
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::What it exchanges",
+     "score": 0.4723
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.464
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.456
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "score": 0.4519
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Introduction",
+     "score": 0.4383
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.4279
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "score": 0.4273
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.427
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)",
+     "score": 0.5173
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::What it exchanges",
+     "score": 0.4723
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Introduction",
+     "score": 0.4383
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.4279
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "score": 0.4273
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.427
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.4268
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.4174
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.4165
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Related",
+     "score": 0.4127
+    }
+   ],
+   "merged_count": 14,
+   "rerank_raw": "1,8,9",
+   "rerank_indices": [
+    1,
+    8,
+    9
+   ],
+   "final3": [
+    {
+     "key": "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)",
+     "source": "vector",
+     "score": 0.5173,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "source": "vector",
+     "score": 0.4273,
+     "rerank_input_rank": 9
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "source": "vector",
+     "score": 0.427,
+     "rerank_input_rank": 10
+    }
+   ],
+   "vec_best_rank": 2,
+   "graph_hit": true,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.5263,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "i02",
+   "type": "id",
+   "q": "What is SEC-IAM-005?",
+   "expect": [
+    "identity-and-access-management::Confirmed approach"
+   ],
+   "seed": "identity-and-access-management",
+   "vector_top10": [
+    {
+     "key": "identity-and-access-management::Confirmed approach",
+     "score": 0.5477
+    },
+    {
+     "key": "identity-and-access-management::Related",
+     "score": 0.4969
+    },
+    {
+     "key": "identity-and-access-management::Introduction",
+     "score": 0.4925
+    },
+    {
+     "key": "identity-and-access-management::IAM components",
+     "score": 0.4698
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.4617
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.4487
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.4481
+    },
+    {
+     "key": "identity-and-access-management::Authorization model",
+     "score": 0.4471
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.4464
+    },
+    {
+     "key": "instance-isolation::Enforcement points",
+     "score": 0.4463
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.4617
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.4487
+    },
+    {
+     "key": "instance-isolation::Enforcement points",
+     "score": 0.4463
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4372
+    },
+    {
+     "key": "instance-isolation::The decision",
+     "score": 0.4344
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.4335
+    },
+    {
+     "key": "instance-isolation::Security and testing",
+     "score": 0.4286
+    },
+    {
+     "key": "instance-isolation::Introduction",
+     "score": 0.4221
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.415
+    },
+    {
+     "key": "data-model::Organization",
+     "score": 0.4149
+    }
+   ],
+   "merged_count": 17,
+   "rerank_raw": "0,10,2",
+   "rerank_indices": [
+    0,
+    10,
+    2
+   ],
+   "final3": [
+    {
+     "key": "identity-and-access-management::Confirmed approach",
+     "source": "vector",
+     "score": 0.5477,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "source": "graph",
+     "score": 0.4372,
+     "rerank_input_rank": 11
+    },
+    {
+     "key": "identity-and-access-management::Introduction",
+     "source": "vector",
+     "score": 0.4925,
+     "rerank_input_rank": 3
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.5477,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": true
+  },
+  {
+   "id": "i03",
+   "type": "id",
+   "q": "What is risk RSK-04 and how is it mitigated?",
+   "expect": [
+    "instance-isolation::Security and testing"
+   ],
+   "seed": "instance-isolation",
+   "vector_top10": [
+    {
+     "key": "instance-isolation::Security and testing",
+     "score": 0.6834
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Introduction",
+     "score": 0.4359
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "score": 0.4037
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::What it exchanges",
+     "score": 0.403
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.3972
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)",
+     "score": 0.395
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.3937
+    },
+    {
+     "key": "document-pipeline::Pipeline",
+     "score": 0.3899
+    },
+    {
+     "key": "identity-and-access-management::Confirmed approach",
+     "score": 0.3816
+    },
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "score": 0.3741
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.3937
+    },
+    {
+     "key": "document-pipeline::Pipeline",
+     "score": 0.3899
+    },
+    {
+     "key": "identity-and-access-management::Confirmed approach",
+     "score": 0.3816
+    },
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "score": 0.3741
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.374
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.3686
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.3634
+    },
+    {
+     "key": "document-pipeline::Introduction",
+     "score": 0.3605
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.3565
+    },
+    {
+     "key": "document-pipeline::Data / file separation",
+     "score": 0.3497
+    }
+   ],
+   "merged_count": 16,
+   "rerank_raw": "0,6,12",
+   "rerank_indices": [
+    0,
+    6,
+    12
+   ],
+   "final3": [
+    {
+     "key": "instance-isolation::Security and testing",
+     "source": "vector",
+     "score": 0.6834,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "source": "vector",
+     "score": 0.3937,
+     "rerank_input_rank": 7
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "source": "graph",
+     "score": 0.3634,
+     "rerank_input_rank": 13
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.6834,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": true
+  },
+  {
+   "id": "i04",
+   "type": "id",
+   "q": "Which Sprint 0 decisions must be closed before committing release dates?",
+   "expect": [
+    "ianus-technical-operational-project-document::Delivery and status"
+   ],
+   "seed": "ianus-technical-operational-project-document",
+   "vector_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.5758
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4763
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "score": 0.4286
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.4087
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.4071
+    },
+    {
+     "key": "module-creation-checklist::Quality gates",
+     "score": 0.404
+    },
+    {
+     "key": "ianus-platform::Lifecycle",
+     "score": 0.4021
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.4011
+    },
+    {
+     "key": "instance-isolation::The decision",
+     "score": 0.3998
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.399
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "score": 0.4286
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.4087
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.4071
+    },
+    {
+     "key": "ianus-platform::Lifecycle",
+     "score": 0.4021
+    },
+    {
+     "key": "instance-isolation::The decision",
+     "score": 0.3998
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.399
+    },
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "score": 0.3969
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.3941
+    },
+    {
+     "key": "data-model::Transactions and migrations",
+     "score": 0.3865
+    },
+    {
+     "key": "identity-and-access-management::Compliance",
+     "score": 0.3834
+    }
+   ],
+   "merged_count": 14,
+   "rerank_raw": "0",
+   "rerank_indices": [
+    0
+   ],
+   "final3": [
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "source": "vector",
+     "score": 0.5758,
+     "rerank_input_rank": 1
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.5758,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "i05",
+   "type": "id",
+   "q": "What is DEC-CNF-01?",
+   "expect": [
+    "ianus-technical-operational-project-document::Confirmed decisions",
+    "instance-isolation::The decision"
+   ],
+   "seed": "instance-isolation",
+   "vector_top10": [
+    {
+     "key": "instance-isolation::The decision",
+     "score": 0.5318
+    },
+    {
+     "key": "instance-isolation::Introduction",
+     "score": 0.5088
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4963
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.4572
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.4461
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.4442
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "score": 0.4397
+    },
+    {
+     "key": "module-creation-checklist::What a module is",
+     "score": 0.4375
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)",
+     "score": 0.4339
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.4313
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4963
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.4461
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.4442
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.4313
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.4294
+    },
+    {
+     "key": "data-model::Common columns and ownership",
+     "score": 0.4132
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.4092
+    },
+    {
+     "key": "identity-and-access-management::Confirmed approach",
+     "score": 0.4089
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.4062
+    },
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "score": 0.397
+    }
+   ],
+   "merged_count": 16,
+   "rerank_raw": "0,1,2",
+   "rerank_indices": [
+    0,
+    1,
+    2
+   ],
+   "final3": [
+    {
+     "key": "instance-isolation::The decision",
+     "source": "vector",
+     "score": 0.5318,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "instance-isolation::Introduction",
+     "source": "vector",
+     "score": 0.5088,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "source": "vector",
+     "score": 0.4963,
+     "rerank_input_rank": 3
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": true,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.5318,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "i06",
+   "type": "id",
+   "q": "How many epics does the initial backlog contain?",
+   "expect": [
+    "ianus-technical-operational-project-document::Delivery and status"
+   ],
+   "seed": "ianus-technical-operational-project-document",
+   "vector_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.5321
+    },
+    {
+     "key": "modular-monolith-architecture::Repository structure",
+     "score": 0.4301
+    },
+    {
+     "key": "module-creation-checklist::Backend",
+     "score": 0.4235
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.415
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.4111
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Common technical activities",
+     "score": 0.4101
+    },
+    {
+     "key": "audit-trail::Technical audit trail",
+     "score": 0.4082
+    },
+    {
+     "key": "module-creation-checklist::Data layer",
+     "score": 0.4011
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.4005
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.3985
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "modular-monolith-architecture::Repository structure",
+     "score": 0.4301
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.4111
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Common technical activities",
+     "score": 0.4101
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.4005
+    },
+    {
+     "key": "modular-monolith-architecture::Introduction",
+     "score": 0.3985
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.3928
+    },
+    {
+     "key": "identity-and-access-management::Authorization model",
+     "score": 0.3927
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.3924
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.3915
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.3907
+    }
+   ],
+   "merged_count": 15,
+   "rerank_raw": "0,3,10",
+   "rerank_indices": [
+    0,
+    3,
+    10
+   ],
+   "final3": [
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "source": "vector",
+     "score": 0.5321,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "source": "vector",
+     "score": 0.415,
+     "rerank_input_rank": 4
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "source": "graph",
+     "score": 0.3928,
+     "rerank_input_rank": 11
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.5321,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": true
+  },
+  {
+   "id": "n01",
+   "type": "numeric",
+   "q": "How many validation codes can a pre-validation return and who is authoritative?",
+   "expect": [
+    "puc-rgs-regis-snm-connector::Channels and services",
+    "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)"
+   ],
+   "seed": "puc-rgs-regis-snm-connector",
+   "vector_top10": [
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.48
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "score": 0.4464
+    },
+    {
+     "key": "audit-trail::Technical audit trail",
+     "score": 0.4391
+    },
+    {
+     "key": "document-pipeline::Pipeline",
+     "score": 0.4299
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4266
+    },
+    {
+     "key": "identity-and-access-management::Authorization model",
+     "score": 0.4229
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.4213
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.4201
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.4185
+    },
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "score": 0.4143
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4266
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.4213
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.4185
+    },
+    {
+     "key": "data-model::Common columns and ownership",
+     "score": 0.3953
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.3948
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.3679
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.3675
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.3599
+    },
+    {
+     "key": "data-model::Organization",
+     "score": 0.359
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.3582
+    }
+   ],
+   "merged_count": 17,
+   "rerank_raw": "0,1,13",
+   "rerank_indices": [
+    0,
+    1,
+    13
+   ],
+   "final3": [
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "source": "vector",
+     "score": 0.48,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "source": "vector",
+     "score": 0.4464,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "source": "graph",
+     "score": 0.3675,
+     "rerank_input_rank": 14
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.48,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": true
+  },
+  {
+   "id": "n02",
+   "type": "numeric",
+   "q": "How many TC sheets are in the context table snapshot?",
+   "expect": [
+    "puc-rgs-regis-snm-connector::Channels and services"
+   ],
+   "seed": "data-model",
+   "vector_top10": [
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.4872
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.4806
+    },
+    {
+     "key": "module-creation-checklist::Data layer",
+     "score": 0.4504
+    },
+    {
+     "key": "data-model::Common columns and ownership",
+     "score": 0.4264
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.417
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.4168
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::What it exchanges",
+     "score": 0.4084
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.4069
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.4034
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "score": 0.4029
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.417
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.4168
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "score": 0.4029
+    },
+    {
+     "key": "instance-isolation::Enforcement points",
+     "score": 0.3946
+    },
+    {
+     "key": "document-pipeline::Related",
+     "score": 0.3942
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.3937
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.3858
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.38
+    },
+    {
+     "key": "identity-and-access-management::Related",
+     "score": 0.3751
+    },
+    {
+     "key": "identity-and-access-management::Authorization model",
+     "score": 0.3726
+    }
+   ],
+   "merged_count": 17,
+   "rerank_raw": "1,13,6",
+   "rerank_indices": [
+    1,
+    13,
+    6
+   ],
+   "final3": [
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "source": "vector",
+     "score": 0.4806,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "source": "graph",
+     "score": 0.3858,
+     "rerank_input_rank": 14
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::What it exchanges",
+     "source": "vector",
+     "score": 0.4084,
+     "rerank_input_rank": 7
+    }
+   ],
+   "vec_best_rank": 2,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.4872,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": true
+  },
+  {
+   "id": "n03",
+   "type": "numeric",
+   "q": "How many information structures does PUC 4.0 describe?",
+   "expect": [
+    "puc-rgs-regis-snm-connector::What it exchanges"
+   ],
+   "seed": "puc-rgs-regis-snm-connector",
+   "vector_top10": [
+    {
+     "key": "puc-rgs-regis-snm-connector::What it exchanges",
+     "score": 0.7552
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)",
+     "score": 0.513
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Introduction",
+     "score": 0.4984
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Related",
+     "score": 0.4816
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.4697
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.4624
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4549
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "score": 0.454
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.4417
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.4314
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.4624
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.4549
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.4417
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Architecture and scope",
+     "score": 0.4314
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.4267
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.4211
+    },
+    {
+     "key": "data-model::Related",
+     "score": 0.4141
+    },
+    {
+     "key": "data-model::Organization",
+     "score": 0.413
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.4126
+    },
+    {
+     "key": "modular-monolith-architecture::Repository structure",
+     "score": 0.3915
+    }
+   ],
+   "merged_count": 16,
+   "rerank_raw": "0,4,7",
+   "rerank_indices": [
+    0,
+    4,
+    7
+   ],
+   "final3": [
+    {
+     "key": "puc-rgs-regis-snm-connector::What it exchanges",
+     "source": "vector",
+     "score": 0.7552,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "source": "vector",
+     "score": 0.4697,
+     "rerank_input_rank": 5
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "source": "vector",
+     "score": 0.454,
+     "rerank_input_rank": 8
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.7552,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "n04",
+   "type": "numeric",
+   "q": "What decimal precision is used for percentages and quantities?",
+   "expect": [
+    "data-model::Types, constraints, indices"
+   ],
+   "seed": "data-model",
+   "vector_top10": [
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.5444
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.3736
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.3625
+    },
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "score": 0.358
+    },
+    {
+     "key": "module-creation-checklist::Data layer",
+     "score": 0.3539
+    },
+    {
+     "key": "data-model::Organization",
+     "score": 0.3535
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.3517
+    },
+    {
+     "key": "data-model::Transactions and migrations",
+     "score": 0.3475
+    },
+    {
+     "key": "data-model::Common columns and ownership",
+     "score": 0.3464
+    },
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "score": 0.3404
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.3625
+    },
+    {
+     "key": "document-pipeline::Versions, replacement, retention",
+     "score": 0.358
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.3379
+    },
+    {
+     "key": "instance-isolation::Enforcement points",
+     "score": 0.3309
+    },
+    {
+     "key": "document-pipeline::Data / file separation",
+     "score": 0.327
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.3241
+    },
+    {
+     "key": "identity-and-access-management::Confirmed approach",
+     "score": 0.319
+    },
+    {
+     "key": "instance-isolation::The decision",
+     "score": 0.3126
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.312
+    },
+    {
+     "key": "instance-isolation::Introduction",
+     "score": 0.3114
+    }
+   ],
+   "merged_count": 18,
+   "rerank_raw": "0,4,5",
+   "rerank_indices": [
+    0,
+    4,
+    5
+   ],
+   "final3": [
+    {
+     "key": "data-model::Types, constraints, indices",
+     "source": "vector",
+     "score": 0.5444,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "module-creation-checklist::Data layer",
+     "source": "vector",
+     "score": 0.3539,
+     "rerank_input_rank": 5
+    },
+    {
+     "key": "data-model::Organization",
+     "source": "vector",
+     "score": 0.3535,
+     "rerank_input_rank": 6
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.5444,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "n05",
+   "type": "numeric",
+   "q": "How many phases does the implementation plan have?",
+   "expect": [
+    "ianus-technical-operational-project-document::Delivery and status"
+   ],
+   "seed": "ianus-technical-operational-project-document",
+   "vector_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.5662
+    },
+    {
+     "key": "ianus-platform::Lifecycle",
+     "score": 0.5227
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "score": 0.5109
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.5065
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.5039
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.4892
+    },
+    {
+     "key": "ianus-platform::Scope and actors",
+     "score": 0.4604
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "score": 0.4513
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.4469
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Common technical activities",
+     "score": 0.4454
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-platform::Lifecycle",
+     "score": 0.5227
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "score": 0.5109
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.5065
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.5039
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.4892
+    },
+    {
+     "key": "ianus-platform::Scope and actors",
+     "score": 0.4604
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+     "score": 0.4513
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.4469
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Common technical activities",
+     "score": 0.4454
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Audit",
+     "score": 0.4413
+    }
+   ],
+   "merged_count": 11,
+   "rerank_raw": "0,4,3",
+   "rerank_indices": [
+    0,
+    4,
+    3
+   ],
+   "final3": [
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "source": "vector",
+     "score": 0.5662,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "source": "vector",
+     "score": 0.5039,
+     "rerank_input_rank": 5
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "source": "vector",
+     "score": 0.5065,
+     "rerank_input_rank": 4
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.5662,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "o01",
+   "type": "obscure",
+   "q": "Which documents is the IANUS platform specified in?",
+   "expect": [
+    "ianus-platform::Specified in"
+   ],
+   "seed": "ianus-platform",
+   "vector_top10": [
+    {
+     "key": "ianus-platform::Specified in",
+     "score": 0.7592
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.7171
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.683
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.6717
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Related",
+     "score": 0.6704
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.664
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Related sources",
+     "score": 0.6457
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.6433
+    },
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "score": 0.6347
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Introduction",
+     "score": 0.6269
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.7171
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Related sources",
+     "score": 0.6457
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Introduction",
+     "score": 0.6269
+    },
+    {
+     "key": "modular-monolith-architecture::Related",
+     "score": 0.6124
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.6097
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.6075
+    },
+    {
+     "key": "identity-and-access-management::Introduction",
+     "score": 0.6073
+    },
+    {
+     "key": "identity-and-access-management::Related",
+     "score": 0.5919
+    },
+    {
+     "key": "instance-isolation::Related",
+     "score": 0.5905
+    },
+    {
+     "key": "module-catalog::Related",
+     "score": 0.5879
+    }
+   ],
+   "merged_count": 17,
+   "rerank_raw": "0,1,9",
+   "rerank_indices": [
+    0,
+    1,
+    9
+   ],
+   "final3": [
+    {
+     "key": "ianus-platform::Specified in",
+     "source": "vector",
+     "score": 0.7592,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "source": "vector",
+     "score": 0.7171,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Introduction",
+     "source": "vector",
+     "score": 0.6269,
+     "rerank_input_rank": 10
+    }
+   ],
+   "vec_best_rank": 1,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.7592,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "o02",
+   "type": "obscure",
+   "q": "What does the vault say about functional audit as opposed to technical audit?",
+   "expect": [
+    "audit-trail::Functional audit",
+    "audit-trail::Technical audit trail"
+   ],
+   "seed": "ianus-modular-analysis-and-implementation-plan",
+   "vector_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Audit",
+     "score": 0.6536
+    },
+    {
+     "key": "audit-trail::Introduction",
+     "score": 0.6212
+    },
+    {
+     "key": "audit-trail::Technical audit trail",
+     "score": 0.5798
+    },
+    {
+     "key": "audit-trail::Functional audit",
+     "score": 0.5793
+    },
+    {
+     "key": "module-creation-checklist::Audit and observability",
+     "score": 0.5248
+    },
+    {
+     "key": "audit-trail::Relationship to the rest of the system",
+     "score": 0.5204
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.52
+    },
+    {
+     "key": "module-creation-checklist::What a module is",
+     "score": 0.4725
+    },
+    {
+     "key": "audit-trail::Related",
+     "score": 0.4659
+    },
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "score": 0.4412
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "audit-trail::Introduction",
+     "score": 0.6212
+    },
+    {
+     "key": "audit-trail::Technical audit trail",
+     "score": 0.5798
+    },
+    {
+     "key": "audit-trail::Functional audit",
+     "score": 0.5793
+    },
+    {
+     "key": "audit-trail::Relationship to the rest of the system",
+     "score": 0.5204
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.52
+    },
+    {
+     "key": "audit-trail::Related",
+     "score": 0.4659
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.4368
+    },
+    {
+     "key": "module-catalog::Activation / deactivation",
+     "score": 0.4337
+    },
+    {
+     "key": "data-model::Transactions and migrations",
+     "score": 0.4287
+    },
+    {
+     "key": "module-catalog::Dependency matrix",
+     "score": 0.4274
+    }
+   ],
+   "merged_count": 14,
+   "rerank_raw": "1,0,3",
+   "rerank_indices": [
+    1,
+    0,
+    3
+   ],
+   "final3": [
+    {
+     "key": "audit-trail::Introduction",
+     "source": "vector",
+     "score": 0.6212,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Audit",
+     "source": "vector",
+     "score": 0.6536,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "audit-trail::Functional audit",
+     "source": "vector",
+     "score": 0.5793,
+     "rerank_input_rank": 4
+    }
+   ],
+   "vec_best_rank": 3,
+   "graph_hit": true,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.6536,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "o03",
+   "type": "obscure",
+   "q": "What is the digital file (fascicolo di progetto) in IANUS?",
+   "expect": [
+    "ianus-modular-analysis-and-implementation-plan::Modules",
+    "module-catalog::Modules"
+   ],
+   "seed": "ianus-modular-analysis-and-implementation-plan",
+   "vector_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.64
+    },
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "score": 0.6361
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.6218
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.6074
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.596
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Introduction",
+     "score": 0.5943
+    },
+    {
+     "key": "document-pipeline::Introduction",
+     "score": 0.5873
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "score": 0.5785
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.5639
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Related",
+     "score": 0.5632
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "score": 0.6361
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.6218
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.596
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Introduction",
+     "score": 0.5943
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.5639
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.5593
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Related sources",
+     "score": 0.553
+    },
+    {
+     "key": "ianus-platform::Scope and actors",
+     "score": 0.5485
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.5455
+    },
+    {
+     "key": "ianus-platform::Specified in",
+     "score": 0.5434
+    }
+   ],
+   "merged_count": 15,
+   "rerank_raw": "1,7,6",
+   "rerank_indices": [
+    1,
+    7,
+    6
+   ],
+   "final3": [
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "source": "vector",
+     "score": 0.6361,
+     "rerank_input_rank": 2
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "source": "vector",
+     "score": 0.5785,
+     "rerank_input_rank": 8
+    },
+    {
+     "key": "document-pipeline::Introduction",
+     "source": "vector",
+     "score": 0.5873,
+     "rerank_input_rank": 7
+    }
+   ],
+   "vec_best_rank": 8,
+   "graph_hit": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "best_vector_score": 0.64,
+   "vec_hit": true,
+   "fail_stage": null,
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "x01",
+   "type": "absent",
+   "q": "What is the production SLA and uptime target?",
+   "expect": [],
+   "seed": "module-creation-checklist",
+   "vector_top10": [
+    {
+     "key": "module-creation-checklist::Data layer",
+     "score": 0.4362
+    },
+    {
+     "key": "module-creation-checklist::Quality gates",
+     "score": 0.4238
+    },
+    {
+     "key": "module-creation-checklist::Modularity principles to satisfy",
+     "score": 0.4205
+    },
+    {
+     "key": "module-creation-checklist::Architecture and code boundaries",
+     "score": 0.4203
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.4181
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.4145
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.412
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.4095
+    },
+    {
+     "key": "audit-trail::Technical audit trail",
+     "score": 0.4081
+    },
+    {
+     "key": "instance-isolation::Enforcement points",
+     "score": 0.4072
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.4181
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.4145
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.412
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.4095
+    },
+    {
+     "key": "audit-trail::Technical audit trail",
+     "score": 0.4081
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modularity principles",
+     "score": 0.3996
+    },
+    {
+     "key": "data-model::Organization",
+     "score": 0.3973
+    },
+    {
+     "key": "module-catalog::Modularity principles",
+     "score": 0.3972
+    },
+    {
+     "key": "module-catalog::Modules",
+     "score": 0.3968
+    },
+    {
+     "key": "data-model::Table catalog",
+     "score": 0.3915
+    }
+   ],
+   "merged_count": 15,
+   "rerank_raw": "I don't have enough information to answer this.",
+   "rerank_indices": [],
+   "final3": [],
+   "vec_best_rank": null,
+   "graph_hit": false,
+   "merged_hit": false,
+   "final_hit": false,
+   "best_vector_score": 0.4362,
+   "vec_hit": false,
+   "fail_stage": "n/a",
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "x02",
+   "type": "absent",
+   "q": "How do I configure the SMTP mail server?",
+   "expect": [],
+   "seed": "puc-rgs-regis-snm-connector",
+   "vector_top10": [
+    {
+     "key": "puc-rgs-regis-snm-connector::Transmission flow",
+     "score": 0.4198
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)",
+     "score": 0.4065
+    },
+    {
+     "key": "puc-rgs-regis-snm-connector::Channels and services",
+     "score": 0.3968
+    },
+    {
+     "key": "data-model::Organization",
+     "score": 0.3651
+    },
+    {
+     "key": "identity-and-access-management::Confirmed approach",
+     "score": 0.3639
+    },
+    {
+     "key": "document-pipeline::Pipeline",
+     "score": 0.3614
+    },
+    {
+     "key": "module-creation-checklist::Data layer",
+     "score": 0.3583
+    },
+    {
+     "key": "document-pipeline::Data / file separation",
+     "score": 0.3527
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.3522
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.3508
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "data-model::Organization",
+     "score": 0.3651
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.3522
+    },
+    {
+     "key": "data-model::Types, constraints, indices",
+     "score": 0.3508
+    },
+    {
+     "key": "data-model::Transactions and migrations",
+     "score": 0.3464
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.3421
+    },
+    {
+     "key": "modular-monolith-architecture::Technology baseline",
+     "score": 0.3324
+    },
+    {
+     "key": "modular-monolith-architecture::Repository structure",
+     "score": 0.3292
+    },
+    {
+     "key": "modular-monolith-architecture::Mandatory principles",
+     "score": 0.3279
+    },
+    {
+     "key": "modular-monolith-architecture::ADR-001 — Modular monolith",
+     "score": 0.3242
+    },
+    {
+     "key": "data-model::Introduction",
+     "score": 0.3154
+    }
+   ],
+   "merged_count": 17,
+   "rerank_raw": "I don't have a passage that explains how to configure the SMTP mail server.",
+   "rerank_indices": [],
+   "final3": [],
+   "vec_best_rank": null,
+   "graph_hit": false,
+   "merged_hit": false,
+   "final_hit": false,
+   "best_vector_score": 0.4198,
+   "vec_hit": false,
+   "fail_stage": "n/a",
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "x03",
+   "type": "absent",
+   "q": "What are the statuses a project can have in IANUS?",
+   "expect": [],
+   "seed": "ianus-modular-analysis-and-implementation-plan",
+   "vector_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.6315
+    },
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.6282
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.6272
+    },
+    {
+     "key": "ianus-platform::Lifecycle",
+     "score": 0.6237
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.6201
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.616
+    },
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "score": 0.6139
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.5936
+    },
+    {
+     "key": "ianus-platform::Scope and actors",
+     "score": 0.5908
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Modules",
+     "score": 0.5901
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.6282
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "score": 0.6272
+    },
+    {
+     "key": "ianus-platform::Lifecycle",
+     "score": 0.6237
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.6201
+    },
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "score": 0.6139
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.5936
+    },
+    {
+     "key": "ianus-platform::Scope and actors",
+     "score": 0.5908
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Confirmed decisions",
+     "score": 0.5866
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.5712
+    },
+    {
+     "key": "identity-and-access-management::Introduction",
+     "score": 0.5575
+    }
+   ],
+   "merged_count": 13,
+   "rerank_raw": "3,6,2",
+   "rerank_indices": [
+    3,
+    6,
+    2
+   ],
+   "final3": [
+    {
+     "key": "ianus-platform::Lifecycle",
+     "source": "vector",
+     "score": 0.6237,
+     "rerank_input_rank": 4
+    },
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "source": "vector",
+     "score": 0.6139,
+     "rerank_input_rank": 7
+    },
+    {
+     "key": "ianus-technical-operational-project-document::Delivery and status",
+     "source": "vector",
+     "score": 0.6272,
+     "rerank_input_rank": 3
+    }
+   ],
+   "vec_best_rank": null,
+   "graph_hit": false,
+   "merged_hit": false,
+   "final_hit": false,
+   "best_vector_score": 0.6315,
+   "vec_hit": false,
+   "fail_stage": "n/a",
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  },
+  {
+   "id": "x04",
+   "type": "absent",
+   "q": "Who is the product owner for IANUS?",
+   "expect": [],
+   "seed": "ianus-technical-operational-project-document",
+   "vector_top10": [
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "score": 0.6254
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.6135
+    },
+    {
+     "key": "identity-and-access-management::Introduction",
+     "score": 0.6071
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.6017
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.5781
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.5759
+    },
+    {
+     "key": "module-creation-checklist::Introduction",
+     "score": 0.5727
+    },
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "score": 0.5714
+    },
+    {
+     "key": "ianus-platform::Scope and actors",
+     "score": 0.5709
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.5667
+    }
+   ],
+   "graph_top10": [
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "score": 0.6135
+    },
+    {
+     "key": "identity-and-access-management::Introduction",
+     "score": 0.6071
+    },
+    {
+     "key": "ianus-platform::Introduction",
+     "score": 0.6017
+    },
+    {
+     "key": "module-catalog::Introduction",
+     "score": 0.5781
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "score": 0.5759
+    },
+    {
+     "key": "ianus-platform::Purpose and objectives",
+     "score": 0.5714
+    },
+    {
+     "key": "ianus-platform::Scope and actors",
+     "score": 0.5709
+    },
+    {
+     "key": "ianus-platform::Architecture context",
+     "score": 0.5667
+    },
+    {
+     "key": "data-model::Introduction",
+     "score": 0.5589
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+     "score": 0.5464
+    }
+   ],
+   "merged_count": 12,
+   "rerank_raw": "0,5,1",
+   "rerank_indices": [
+    0,
+    5,
+    1
+   ],
+   "final3": [
+    {
+     "key": "ianus-technical-operational-project-document::What this document is",
+     "source": "vector",
+     "score": 0.6254,
+     "rerank_input_rank": 1
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::What this document is",
+     "source": "vector",
+     "score": 0.5759,
+     "rerank_input_rank": 6
+    },
+    {
+     "key": "ianus-modular-analysis-and-implementation-plan::Introduction",
+     "source": "vector",
+     "score": 0.6135,
+     "rerank_input_rank": 2
+    }
+   ],
+   "vec_best_rank": null,
+   "graph_hit": false,
+   "merged_hit": false,
+   "final_hit": false,
+   "best_vector_score": 0.6254,
+   "vec_hit": false,
+   "fail_stage": "n/a",
+   "graph_contributed_new": true,
+   "final_from_graph_only": false
+  }
+ ],
+ "tokens": {
+  "input": 92227,
+  "output": 213
+ }
+}

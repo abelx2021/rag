@@ -1,0 +1,732 @@
+{
+ "summary": {
+  "K": 3,
+  "pass": 2,
+  "merged_recall": 36,
+  "final_top3": 36,
+  "final_rank1": 32,
+  "avg_candidates": 16.025,
+  "avg_tokens": 2357.7,
+  "tokens_total": 94308,
+  "sibling_rescues": 1,
+  "graph_rescues": 1,
+  "sibling_first_hit": 1,
+  "graph_first_hit": 1
+ },
+ "rows": [
+  {
+   "id": "d01",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "graph",
+   "merged_count": 15,
+   "tokens": 1882,
+   "rerank_raw": "10,3,9",
+   "n_indices": 3,
+   "final3": [
+    "puc-rgs-regis-snm-connector::Transmission flow",
+    "puc-rgs-regis-snm-connector::Introduction",
+    "puc-rgs-regis-snm-connector::What it exchanges"
+   ]
+  },
+  {
+   "id": "d02",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 17,
+   "tokens": 2409,
+   "rerank_raw": "0,4,6",
+   "n_indices": 3,
+   "final3": [
+    "document-pipeline::Data / file separation",
+    "document-pipeline::Pipeline",
+    "document-pipeline::Versions, replacement, retention"
+   ]
+  },
+  {
+   "id": "d03",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 17,
+   "tokens": 2407,
+   "rerank_raw": "0,3,1",
+   "n_indices": 3,
+   "final3": [
+    "document-pipeline::Pipeline",
+    "document-pipeline::Introduction",
+    "document-pipeline::Data / file separation"
+   ]
+  },
+  {
+   "id": "d04",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 2,
+   "found_by": "vector",
+   "merged_count": 16,
+   "tokens": 2098,
+   "rerank_raw": "1,2,10",
+   "n_indices": 3,
+   "final3": [
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+    "data-model::Organization",
+    "data-model::Table catalog"
+   ]
+  },
+  {
+   "id": "d05",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 16,
+   "tokens": 2435,
+   "rerank_raw": "0,5,7",
+   "n_indices": 3,
+   "final3": [
+    "data-model::Types, constraints, indices",
+    "data-model::Introduction",
+    "data-model::Organization"
+   ]
+  },
+  {
+   "id": "d06",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 16,
+   "tokens": 2276,
+   "rerank_raw": "0,4,13",
+   "n_indices": 3,
+   "final3": [
+    "modular-monolith-architecture::Technology baseline",
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+    "ianus-technical-operational-project-document::Architecture and scope"
+   ]
+  },
+  {
+   "id": "d07",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 16,
+   "tokens": 2675,
+   "rerank_raw": "0,3,4",
+   "n_indices": 3,
+   "final3": [
+    "modular-monolith-architecture::Repository structure",
+    "module-creation-checklist::Architecture and code boundaries",
+    "modular-monolith-architecture::ADR-001 — Modular monolith"
+   ]
+  },
+  {
+   "id": "d08",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 19,
+   "tokens": 2691,
+   "rerank_raw": "0,1,2",
+   "n_indices": 3,
+   "final3": [
+    "module-catalog::Activation / deactivation",
+    "module-creation-checklist::Modularity principles to satisfy",
+    "module-catalog::Modularity principles"
+   ]
+  },
+  {
+   "id": "d09",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 17,
+   "tokens": 2698,
+   "rerank_raw": "0,5,4",
+   "n_indices": 3,
+   "final3": [
+    "module-catalog::Dependency matrix",
+    "ianus-modular-analysis-and-implementation-plan::Modules",
+    "module-catalog::Modules"
+   ]
+  },
+  {
+   "id": "d10",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 17,
+   "tokens": 2303,
+   "rerank_raw": "0,2,5",
+   "n_indices": 3,
+   "final3": [
+    "audit-trail::Technical audit trail",
+    "module-creation-checklist::Audit and observability",
+    "audit-trail::Relationship to the rest of the system"
+   ]
+  },
+  {
+   "id": "d11",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 16,
+   "tokens": 2410,
+   "rerank_raw": "0,3,2",
+   "n_indices": 3,
+   "final3": [
+    "document-pipeline::Versions, replacement, retention",
+    "document-pipeline::Pipeline",
+    "document-pipeline::Data / file separation"
+   ]
+  },
+  {
+   "id": "d12",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 18,
+   "tokens": 2210,
+   "rerank_raw": "2,0,16",
+   "n_indices": 3,
+   "final3": [
+    "identity-and-access-management::IAM components",
+    "identity-and-access-management::Introduction",
+    "ianus-technical-operational-project-document::Confirmed decisions"
+   ]
+  },
+  {
+   "id": "d13",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 15,
+   "tokens": 1699,
+   "rerank_raw": "0,12,1",
+   "n_indices": 3,
+   "final3": [
+    "instance-isolation::Enforcement points",
+    "data-model::Common columns and ownership",
+    "instance-isolation::Security and testing"
+   ]
+  },
+  {
+   "id": "d14",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 2,
+   "found_by": "sibling",
+   "merged_count": 14,
+   "tokens": 1909,
+   "rerank_raw": "1,11,0",
+   "n_indices": 3,
+   "final3": [
+    "ianus-modular-analysis-and-implementation-plan::Modules",
+    "module-catalog::Modules",
+    "module-catalog::Introduction"
+   ]
+  },
+  {
+   "id": "d15",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 16,
+   "tokens": 2285,
+   "rerank_raw": "0,2,3",
+   "n_indices": 3,
+   "final3": [
+    "data-model::Table catalog",
+    "data-model::Organization",
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation"
+   ]
+  },
+  {
+   "id": "d16",
+   "type": "direct",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 16,
+   "tokens": 2438,
+   "rerank_raw": "0,1,3",
+   "n_indices": 3,
+   "final3": [
+    "modular-monolith-architecture::ADR-001 — Modular monolith",
+    "modular-monolith-architecture::Introduction",
+    "module-creation-checklist::Architecture and code boundaries"
+   ]
+  },
+  {
+   "id": "s01",
+   "type": "synthesis",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 16,
+   "tokens": 2402,
+   "rerank_raw": "1,4,5",
+   "n_indices": 3,
+   "final3": [
+    "module-creation-checklist::Modularity principles to satisfy",
+    "module-catalog::Modularity principles",
+    "ianus-modular-analysis-and-implementation-plan::Modularity principles"
+   ]
+  },
+  {
+   "id": "s02",
+   "type": "synthesis",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 16,
+   "tokens": 2342,
+   "rerank_raw": "0,1,3",
+   "n_indices": 3,
+   "final3": [
+    "module-creation-checklist::Quality gates",
+    "module-creation-checklist::Modularity principles to satisfy",
+    "module-catalog::Modularity principles"
+   ]
+  },
+  {
+   "id": "s03",
+   "type": "synthesis",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 17,
+   "tokens": 2438,
+   "rerank_raw": "0,3,6",
+   "n_indices": 3,
+   "final3": [
+    "modular-monolith-architecture::ADR-001 — Modular monolith",
+    "modular-monolith-architecture::Why a single database",
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database"
+   ]
+  },
+  {
+   "id": "s04",
+   "type": "synthesis",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 15,
+   "tokens": 2034,
+   "rerank_raw": "0,1,8",
+   "n_indices": 3,
+   "final3": [
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+    "modular-monolith-architecture::Why a single database",
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal"
+   ]
+  },
+  {
+   "id": "s05",
+   "type": "synthesis",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 14,
+   "tokens": 2378,
+   "rerank_raw": "0,13,9",
+   "n_indices": 3,
+   "final3": [
+    "module-creation-checklist::Data layer",
+    "data-model::Transactions and migrations",
+    "data-model::Types, constraints, indices"
+   ]
+  },
+  {
+   "id": "s06",
+   "type": "synthesis",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 17,
+   "tokens": 2869,
+   "rerank_raw": "0,4,2",
+   "n_indices": 3,
+   "final3": [
+    "modular-monolith-architecture::Mandatory principles",
+    "modular-monolith-architecture::ADR-001 — Modular monolith",
+    "module-catalog::Modularity principles"
+   ]
+  },
+  {
+   "id": "i01",
+   "type": "id",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 14,
+   "tokens": 2252,
+   "rerank_raw": "1,8,9",
+   "n_indices": 3,
+   "final3": [
+    "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)",
+    "puc-rgs-regis-snm-connector::Transmission flow",
+    "puc-rgs-regis-snm-connector::Channels and services"
+   ]
+  },
+  {
+   "id": "i02",
+   "type": "id",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 17,
+   "tokens": 2324,
+   "rerank_raw": "0,10,2",
+   "n_indices": 3,
+   "final3": [
+    "identity-and-access-management::Confirmed approach",
+    "ianus-technical-operational-project-document::Confirmed decisions",
+    "identity-and-access-management::Introduction"
+   ]
+  },
+  {
+   "id": "i03",
+   "type": "id",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 18,
+   "tokens": 2648,
+   "rerank_raw": "0,10,11",
+   "n_indices": 3,
+   "final3": [
+    "instance-isolation::Security and testing",
+    "instance-isolation::Enforcement points",
+    "instance-isolation::The decision"
+   ]
+  },
+  {
+   "id": "i04",
+   "type": "id",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 14,
+   "tokens": 2111,
+   "rerank_raw": "0",
+   "n_indices": 1,
+   "final3": [
+    "ianus-technical-operational-project-document::Delivery and status"
+   ]
+  },
+  {
+   "id": "i05",
+   "type": "id",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 17,
+   "tokens": 2517,
+   "rerank_raw": "0,1,2",
+   "n_indices": 3,
+   "final3": [
+    "instance-isolation::The decision",
+    "instance-isolation::Introduction",
+    "ianus-technical-operational-project-document::Confirmed decisions"
+   ]
+  },
+  {
+   "id": "i06",
+   "type": "id",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 16,
+   "tokens": 2822,
+   "rerank_raw": "0,3,11",
+   "n_indices": 3,
+   "final3": [
+    "ianus-technical-operational-project-document::Delivery and status",
+    "ianus-technical-operational-project-document::What this document is",
+    "module-catalog::Introduction"
+   ]
+  },
+  {
+   "id": "n01",
+   "type": "numeric",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 18,
+   "tokens": 3258,
+   "rerank_raw": "0,1,10",
+   "n_indices": 3,
+   "final3": [
+    "puc-rgs-regis-snm-connector::Channels and services",
+    "puc-rgs-regis-snm-connector::Transmission flow",
+    "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)"
+   ]
+  },
+  {
+   "id": "n02",
+   "type": "numeric",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 17,
+   "tokens": 2850,
+   "rerank_raw": "1,13,6",
+   "n_indices": 3,
+   "final3": [
+    "puc-rgs-regis-snm-connector::Channels and services",
+    "ianus-technical-operational-project-document::What this document is",
+    "puc-rgs-regis-snm-connector::What it exchanges"
+   ]
+  },
+  {
+   "id": "n03",
+   "type": "numeric",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 16,
+   "tokens": 2409,
+   "rerank_raw": "0,4,7",
+   "n_indices": 3,
+   "final3": [
+    "puc-rgs-regis-snm-connector::What it exchanges",
+    "puc-rgs-regis-snm-connector::Channels and services",
+    "puc-rgs-regis-snm-connector::Transmission flow"
+   ]
+  },
+  {
+   "id": "n04",
+   "type": "numeric",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 18,
+   "tokens": 2832,
+   "rerank_raw": "0,4,5",
+   "n_indices": 3,
+   "final3": [
+    "data-model::Types, constraints, indices",
+    "module-creation-checklist::Data layer",
+    "data-model::Organization"
+   ]
+  },
+  {
+   "id": "n05",
+   "type": "numeric",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 13,
+   "tokens": 1817,
+   "rerank_raw": "0,4,3",
+   "n_indices": 3,
+   "final3": [
+    "ianus-technical-operational-project-document::Delivery and status",
+    "ianus-modular-analysis-and-implementation-plan::What this document is",
+    "ianus-modular-analysis-and-implementation-plan::Introduction"
+   ]
+  },
+  {
+   "id": "o01",
+   "type": "obscure",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 1,
+   "found_by": "vector",
+   "merged_count": 17,
+   "tokens": 1794,
+   "rerank_raw": "0,1,9",
+   "n_indices": 3,
+   "final3": [
+    "ianus-platform::Specified in",
+    "ianus-technical-operational-project-document::What this document is",
+    "ianus-technical-operational-project-document::Introduction"
+   ]
+  },
+  {
+   "id": "o02",
+   "type": "obscure",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 3,
+   "found_by": "vector",
+   "merged_count": 16,
+   "tokens": 2245,
+   "rerank_raw": "1,0,3",
+   "n_indices": 3,
+   "final3": [
+    "audit-trail::Introduction",
+    "ianus-modular-analysis-and-implementation-plan::Audit",
+    "audit-trail::Functional audit"
+   ]
+  },
+  {
+   "id": "o03",
+   "type": "obscure",
+   "absent": false,
+   "merged_hit": true,
+   "final_hit": true,
+   "final_pos": 2,
+   "found_by": "vector",
+   "merged_count": 15,
+   "tokens": 1928,
+   "rerank_raw": "1,7,0",
+   "n_indices": 3,
+   "final3": [
+    "ianus-platform::Purpose and objectives",
+    "ianus-modular-analysis-and-implementation-plan::Modules",
+    "ianus-modular-analysis-and-implementation-plan::What this document is"
+   ]
+  },
+  {
+   "id": "x01",
+   "type": "absent",
+   "absent": true,
+   "merged_hit": false,
+   "final_hit": false,
+   "final_pos": null,
+   "found_by": null,
+   "merged_count": 15,
+   "tokens": 2762,
+   "rerank_raw": "I don't see any passage that mentions a production SLA or uptime target. None of the candidates address service-level agreements, availability percentages, or uptime commitments.",
+   "n_indices": 0,
+   "final3": [
+    "module-creation-checklist::Data layer"
+   ]
+  },
+  {
+   "id": "x02",
+   "type": "absent",
+   "absent": true,
+   "merged_hit": false,
+   "final_hit": false,
+   "final_pos": null,
+   "found_by": null,
+   "merged_count": 17,
+   "tokens": 2699,
+   "rerank_raw": "I don't have any passages about SMTP mail server configuration among the candidates. None of the 17 passages mention SMTP, mail servers, or email configuration.",
+   "n_indices": 1,
+   "final3": [
+    "data-model::Organization"
+   ]
+  },
+  {
+   "id": "x03",
+   "type": "absent",
+   "absent": true,
+   "merged_hit": false,
+   "final_hit": false,
+   "final_pos": null,
+   "found_by": null,
+   "merged_count": 13,
+   "tokens": 1910,
+   "rerank_raw": "3,6,2",
+   "n_indices": 3,
+   "final3": [
+    "ianus-platform::Lifecycle",
+    "ianus-platform::Purpose and objectives",
+    "ianus-technical-operational-project-document::Delivery and status"
+   ]
+  },
+  {
+   "id": "x04",
+   "type": "absent",
+   "absent": true,
+   "merged_hit": false,
+   "final_hit": false,
+   "final_pos": null,
+   "found_by": null,
+   "merged_count": 14,
+   "tokens": 1842,
+   "rerank_raw": "0,10,5",
+   "n_indices": 3,
+   "final3": [
+    "ianus-technical-operational-project-document::What this document is",
+    "ianus-technical-operational-project-document::Introduction",
+    "ianus-modular-analysis-and-implementation-plan::What this document is"
+   ]
+  }
+ ]
+}

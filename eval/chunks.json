@@ -1,0 +1,783 @@
+[
+ {
+  "i": 0,
+  "document": "audit-trail",
+  "section": "Introduction",
+  "chars": 268,
+  "links": [],
+  "text": "IANUS uses \"audit\" in two related senses: the **technical audit trail** — automatic recording of every operation performed in the system — and the **functional audit** — the checks, findings, evidence and corrective actions recorded by auditors in the Controls module."
+ },
+ {
+  "i": 1,
+  "document": "audit-trail",
+  "section": "Technical audit trail",
+  "chars": 1028,
+  "links": [],
+  "text": "A cross-functional service of the Core, to be implemented **at the beginning of development** and used progressively by each module — not postponed, since reconstructing operation history a posteriori is costly and incomplete.\n\n| Recorded data | Description |\n|---|---|\n| Identity | User, role and Administration membership |\n| Time | Date and time in a consistent, user-unchangeable format |\n| Context | Module, function, entity and record identifier |\n| Operation | Access, create, modify, logical delete, download, send or state change |\n| Variation | Previous and new value for relevant fields, excluding secret data |\n| Outcome | Success or failure, and any error code |\n| Origin | IP address, session identifier and application channel, where applicable |\n\nRules: logs must not be editable by application users; log access is restricted to authorised profiles; storage, consultation, export and protection of personal data must be defined; document operations must include versioning and transmissions to external systems."
+ },
+ {
+  "i": 2,
+  "document": "audit-trail",
+  "section": "Functional audit",
+  "chars": 252,
+  "links": [],
+  "text": "The Controls module gives auditors a dedicated view of files, documents and history, where they record checks, findings, evidence, corrective actions and outcomes. Access rules must prevent the auditor from modifying the operational data being audited."
+ },
+ {
+  "i": 3,
+  "document": "audit-trail",
+  "section": "Relationship to the rest of the system",
+  "chars": 421,
+  "links": [
+   "data-model",
+   "module-catalog",
+   "identity-and-access-management"
+  ],
+  "text": "- [[data-model]] — `audit.*` tables, notably `audit.AuditEvent`, saved in the same transaction as the aggregate change and the `OutboxMessage`.\n- [[module-catalog]] — the Audit & Operations module consolidates the trail, access log, transmission log and secure consultation.\n- [[identity-and-access-management]] — auditors/supervisory bodies get strong authentication and read-only consultation; every access is recorded."
+ },
+ {
+  "i": 4,
+  "document": "audit-trail",
+  "section": "Related",
+  "chars": 135,
+  "links": [
+   "ianus-modular-analysis-and-implementation-plan",
+   "ianus-technical-operational-project-document",
+   "ianus-platform"
+  ],
+  "text": "- [[ianus-modular-analysis-and-implementation-plan]] (source: §6), [[ianus-technical-operational-project-document]], [[ianus-platform]]"
+ },
+ {
+  "i": 5,
+  "document": "data-model",
+  "section": "Introduction",
+  "chars": 229,
+  "links": [],
+  "text": "The IANUS physical baseline is a dedicated SQL Server database per instance, split into domain schemas, with opaque primary keys, UTC timestamps, decimal money types, rowversion concurrency, and additive, forward-only migrations."
+ },
+ {
+  "i": 6,
+  "document": "data-model",
+  "section": "Organization",
+  "chars": 786,
+  "links": [
+   "ianus-modular-analysis-and-implementation-plan",
+   "ianus-technical-operational-project-document"
+  ],
+  "text": "- **Database:** one dedicated SQL Server DB per instance (e.g. `IANUS_<ENTITY>_<ENVIRONMENT>`); no shared operational tables between entities.\n- **Schemas:** `core`, `iam`, `procedures`, `projects`, `finance`, `documents`, `controls`, `integrations`, `reporting`, `audit`. (The earlier [[ianus-modular-analysis-and-implementation-plan]] proposed only 8 — `core`, `procedures`, `projects`, `documents`, `controls`, `integrations`, `audit`, `reporting`; `iam` and `finance` were added in the [[ianus-technical-operational-project-document]].)\n- **Collation:** `Latin1_General_100_CI_AI_SC_UTF8` (or DBA-approved); descriptive data case-insensitive, codes normalized uppercase.\n- **Time:** all instants `datetime2(3)` UTC; civil dates as `date`; institution timezone is application config."
+ },
+ {
+  "i": 7,
+  "document": "data-model",
+  "section": "Common columns and ownership",
+  "chars": 713,
+  "links": [],
+  "text": "Every operational table carries `Id` (application-generated uniqueidentifier), `AdministrationInstanceId` (FK to `core.AdministrationInstance` — kept even in a dedicated DB for traceability/export/defensive controls), `CreatedAtUtc`/`CreatedBy`, optional `UpdatedAtUtc`/`UpdatedBy`, optional `DeletedAtUtc`/`DeletedBy` (EF query filter), `RowVersion` (concurrency token, never accepted from the body), plus public/status codes.\n\nEach repository receives `AdministrationInstanceId` from the authenticated context, not the request body; FKs include implicit ownership; there is no application super-tenant for global queries. Personal identifiers are searchable only by protected normalized value or dedicated hash."
+ },
+ {
+  "i": 8,
+  "document": "data-model",
+  "section": "Types, constraints, indices",
+  "chars": 575,
+  "links": [],
+  "text": "Amounts are `decimal(19.4)`, percentages `decimal(9.6)`, quantities `decimal(18.6)` — float/real prohibited for financial values. PKs `PK_<Schema>_<Table>`; FKs `FK_<Child>_<Parent>_<Column>` with `ON DELETE NO ACTION` (CASCADE only on never-transmitted draft details); filtered unique indexes for active records (e.g. `WHERE DeletedAtUtc IS NULL`); check constraints for non-negative amounts, date ranges, percentages 0–100; indexes lead with `AdministrationInstanceId` where it improves selectivity/isolation; full-text on authorized projections, never on blobs or secrets."
+ },
+ {
+  "i": 9,
+  "document": "data-model",
+  "section": "Transactions and migrations",
+  "chars": 431,
+  "links": [],
+  "text": "An aggregate change, its `AuditEvent`, and the `OutboxMessage` are saved in the same transaction; external calls happen only post-commit from the worker. Migrations are forward-only, idempotent, reviewed, applied by a pipeline identity separate from the runtime user — `Database.Migrate()` at startup is prohibited in production. Incompatible changes follow expand-migrate-contract. Large backfills run in batches with checkpoints."
+ },
+ {
+  "i": 10,
+  "document": "data-model",
+  "section": "Table catalog",
+  "chars": 703,
+  "links": [],
+  "text": "The document specifies minimum tables per schema — e.g. `core.AdministrationInstance/OrganizationUnit/Program/Fund/ModuleActivation/DomainValueSet`, `iam.UserIdentity/LocalCredential/MfaAuthenticator/AuthSession/Role/Permission`, `procedures.Notice/Application/Evaluation/Ranking/Grant`, `projects.Project/ProjectParty/Milestone/ProjectIndicator`, `finance.BudgetVersion/Commitment/Liquidation/Payment/Mandate/Expense/ProgressReport/FinancialSnapshot`, `documents.Document/DocumentVersion`, `controls.ControlCase/Finding`, `integrations.Transmission/OutboxMessage`, `audit.AuditEvent`, `reporting.ReportDefinition/DashboardDefinition` — each with PKs, relations, required fields, and domain constraints."
+ },
+ {
+  "i": 11,
+  "document": "data-model",
+  "section": "Related",
+  "chars": 168,
+  "links": [
+   "modular-monolith-architecture",
+   "instance-isolation",
+   "document-pipeline",
+   "identity-and-access-management",
+   "ianus-technical-operational-project-document"
+  ],
+  "text": "- [[modular-monolith-architecture]], [[instance-isolation]], [[document-pipeline]], [[identity-and-access-management]], [[ianus-technical-operational-project-document]]"
+ },
+ {
+  "i": 12,
+  "document": "document-pipeline",
+  "section": "Introduction",
+  "chars": 215,
+  "links": [],
+  "text": "IANUS stores file content in object storage and keeps only metadata, references, versions and hashes in SQL Server, with a quarantine → scan → promote pipeline and adapter-based signature, protocol and preservation."
+ },
+ {
+  "i": 13,
+  "document": "document-pipeline",
+  "section": "Data / file separation",
+  "chars": 523,
+  "links": [],
+  "text": "- **SQL Server:** metadata only — Document, DocumentVersion, DocumentLink, classification, hash, scan status, retention.\n- **Object storage:** original blobs, signed versions, receipts, exports, bulk payloads.\n\nObject keys follow `<instance>/<environment>/<entity-type>/<entity-id>/<document-id>/<version>/<sha256-prefix>/<opaque-id>` and never contain file names, tax codes, CUP or other personal data. Separate containers for upload-temporary, quarantine, documents, integration-artifacts, exports, and backups/manifests."
+ },
+ {
+  "i": 14,
+  "document": "document-pipeline",
+  "section": "Pipeline",
+  "chars": 507,
+  "links": [],
+  "text": "1. Authorized upload request (context, type, size, formats).\n2. Upload to temporary/quarantine area; SHA-256 computed.\n3. Antivirus scan + MIME/extension checks; non-compliant files rejected.\n4. Metadata + version recorded; promotion to permanent storage with an unpredictable key.\n5. Optional text extraction/OCR, classification and asynchronous indexing.\n6. Optional signature, protocol registration, and archiving via adapters.\n7. Authorization-mediated download, audited, with no physical path exposure."
+ },
+ {
+  "i": 15,
+  "document": "document-pipeline",
+  "section": "Versions, replacement, retention",
+  "chars": 403,
+  "links": [],
+  "text": "Every new version keeps the relationship, author, reason and hash; the previous one stays unmodifiable. Downloads re-evaluate permissions on owner/classification/status before issuing short-lived URLs. Replacement creates version N+1 (never overwrites the object). Logical deletion follows policy; legal hold blocks lifecycle/deletion; a reconciliation job compares DB and storage without auto-deleting."
+ },
+ {
+  "i": 16,
+  "document": "document-pipeline",
+  "section": "Related",
+  "chars": 156,
+  "links": [
+   "data-model",
+   "instance-isolation",
+   "ianus-platform",
+   "ianus-technical-operational-project-document"
+  ],
+  "text": "- [[data-model]] (`documents.*` tables), [[instance-isolation]] (per-instance storage), [[ianus-platform]], [[ianus-technical-operational-project-document]]"
+ },
+ {
+  "i": 17,
+  "document": "ianus-modular-analysis-and-implementation-plan",
+  "section": "Introduction",
+  "chars": 313,
+  "links": [
+   "ianus-platform"
+  ],
+  "text": "The IANUS **Modular Analysis and Implementation Plan** is the analysis that turns the functional description of [[ianus-platform]] into a concrete development plan: it proposes the modular-monolith architecture, defines the modules, dependencies and deactivation behaviour, and fixes the audit-trail requirements."
+ },
+ {
+  "i": 18,
+  "document": "ianus-modular-analysis-and-implementation-plan",
+  "section": "What this document is",
+  "chars": 822,
+  "links": [
+   "ianus-technical-operational-project-document",
+   "modular-monolith-architecture"
+  ],
+  "text": "The earlier, analysis-oriented companion to the [[ianus-technical-operational-project-document]] (v1.3), which it feeds as an input attachment. Where v1.3 closes scope, non-functional requirements and the delivery plan, this document concentrates on the architectural proposal, the module breakdown, and the implementation order.\n\n- **Proposal:** build IANUS as a [[modular-monolith-architecture]] with a single SQL Server database organised into schemas per module; modules must be activatable/deactivatable without compromising the system's independent functionality.\n- **Scope:** the full lifecycle of FSC, ERDF, ESF and INTERREG funds — from planning and publication of procedures through application, selection, implementation, reporting, monitoring, and production of information flows for the competent authorities."
+ },
+ {
+  "i": 19,
+  "document": "ianus-modular-analysis-and-implementation-plan",
+  "section": "Architectural proposal",
+  "chars": 614,
+  "links": [],
+  "text": "| Element | Proposal |\n|---|---|\n| Frontend | Angular, keeping the IANUS demo graphics/layout; functionality in feature modules |\n| Backend | .NET divided into Core + functional modules, dedicated services and controllers |\n| Database | A single SQL Server; tables separated by logical schemas per module |\n| Activation | Centralised configuration enabling/disabling each module per Customer Administration |\n| Communication | Defined contracts/interfaces; no direct access to another module's internals |\n| Reporting | Cross-referencing of authorised data from different modules, without operational duplication |"
+ },
+ {
+  "i": 20,
+  "document": "ianus-modular-analysis-and-implementation-plan",
+  "section": "Architectural proposal > Why a single database",
+  "chars": 489,
+  "links": [],
+  "text": "Cross-module reports must link procedures, projects, beneficiaries, expenses, SALs and controls — cross-querying is simpler and more reliable in one DB; related transactions share a single data context; installation, backups, migrations and maintenance are less complex. Logical separation is preserved through schemas, naming, permissions and services. Separate databases would only make sense for modules distributed/scaled as standalone products, which the description does not require."
+ },
+ {
+  "i": 21,
+  "document": "ianus-modular-analysis-and-implementation-plan",
+  "section": "Architectural proposal > Proposed schema organisation",
+  "chars": 236,
+  "links": [
+   "module-catalog",
+   "data-model"
+  ],
+  "text": "`core`, `procedures`, `projects`, `documents`, `controls`, `integrations`, `audit`, `reporting` — each with a defined content list (see [[module-catalog]]). Note the later [[data-model]] adds `iam` and `finance` schemas on top of these."
+ },
+ {
+  "i": 22,
+  "document": "ianus-modular-analysis-and-implementation-plan",
+  "section": "Modularity principles",
+  "chars": 611,
+  "links": [
+   "audit-trail"
+  ],
+  "text": "Each module must: have clearly identifiable screens, APIs, services and tables; expose only the necessary data/operations via defined contracts; not require an optional module to complete its core functions; check enablement in **both** frontend and backend; hide menus/routes when disabled but still protect APIs from direct access; never delete data on deactivation (only make it temporarily unusable); and record relevant transactions in the common [[audit-trail]]. **Basic rule:** deactivating a module removes its functionality, menus and API, but must not error other active modules or delete stored data."
+ },
+ {
+  "i": 23,
+  "document": "ianus-modular-analysis-and-implementation-plan",
+  "section": "Modules",
+  "chars": 603,
+  "links": [
+   "module-catalog"
+  ],
+  "text": "The document defines 9 modules (see [[module-catalog]] for the consolidated table):\n\n1. Core & configuration — mandatory, not deactivatable.\n2. Procedures, calls for tenders & applications — functional.\n3. Projects & monitoring — functional.\n4. Digital project file — functional.\n5. Document management — transversal.\n6. Control activities — functional.\n7. External integrations — transversal.\n8. Public section of beneficiaries — optional.\n9. Reporting & business intelligence — optional.\n\nThe full dependency matrix (mandatory dependencies + behaviour when disabled) is recorded in [[module-catalog]]."
+ },
+ {
+  "i": 24,
+  "document": "ianus-modular-analysis-and-implementation-plan",
+  "section": "Audit",
+  "chars": 329,
+  "links": [
+   "audit-trail"
+  ],
+  "text": "The document distinguishes the technical [[audit-trail]] (automatic recording of operations) from the functional audit (checks, findings, evidence, corrective actions by auditors in the Controls module). The audit trail is a cross-functional Core service that must be implemented **from the start of development**, not postponed."
+ },
+ {
+  "i": 25,
+  "document": "ianus-modular-analysis-and-implementation-plan",
+  "section": "Access types",
+  "chars": 289,
+  "links": [
+   "identity-and-access-management"
+  ],
+  "text": "Three main access types, all recorded in the audit system: beneficiaries/external parties via SPID/CIE; administration operators via company credentials; auditors/supervisory bodies with strong authentication and restricted, read-only consultation — see [[identity-and-access-management]]."
+ },
+ {
+  "i": 26,
+  "document": "ianus-modular-analysis-and-implementation-plan",
+  "section": "Common technical activities",
+  "chars": 601,
+  "links": [],
+  "text": "A checklist across Angular frontend (routes/menus/components by module, enable + permission guards), .NET backend (services, contracts, no circular dependencies), EF Core/SQL Server (schemas, relations, indexes, constraints, logical deletion, controlled migrations), safety (auth, roles, API protection, encryption, secrets, input validation), documents (storage, metadata, versioning, AV, limits, signature, protocol, retention), quality (unit/integration/authorization/deactivation tests, acceptance criteria) and exercise (logging, monitoring, error management, backup/recovery, disaster recovery)."
+ },
+ {
+  "i": 27,
+  "document": "ianus-modular-analysis-and-implementation-plan",
+  "section": "Related",
+  "chars": 241,
+  "links": [
+   "ianus-technical-operational-project-document",
+   "modular-monolith-architecture",
+   "module-catalog",
+   "data-model",
+   "audit-trail",
+   "identity-and-access-management",
+   "ianus-platform"
+  ],
+  "text": "- [[ianus-technical-operational-project-document]] — the v1.3 specification this analysis feeds.\n- [[modular-monolith-architecture]], [[module-catalog]], [[data-model]], [[audit-trail]], [[identity-and-access-management]], [[ianus-platform]]"
+ },
+ {
+  "i": 28,
+  "document": "ianus-platform",
+  "section": "Introduction",
+  "chars": 245,
+  "links": [],
+  "text": "IANUS is a platform for public administrations to manage the integrated lifecycle of EU cohesion and structural funds (FSC, ERDF, ESF, INTERREG), turning administrative, procedural, physical and financial data into traceable, usable information."
+ },
+ {
+  "i": 29,
+  "document": "ianus-platform",
+  "section": "Purpose and objectives",
+  "chars": 736,
+  "links": [
+   "instance-isolation"
+  ],
+  "text": "IANUS supports public administrations across the full fund lifecycle: programming, calls for tenders, applications, evaluation, granting, implementation, monitoring, reporting, liquidation, closure, and control. Core objectives:\n\n- a single digital file per project with profiled access and complete history;\n- physical isolation per institution via dedicated instances ([[instance-isolation]]);\n- configurable forms, workflows, grids, checklists, document types, dictionaries, and integrations;\n- no data duplication; consistency between financial figures, deeds, documents and statuses;\n- flows, reports, open data and dashboards for authorised parties;\n- a technical and functional audit trail suitable for reconstructing operations."
+ },
+ {
+  "i": 30,
+  "document": "ianus-platform",
+  "section": "Scope and actors",
+  "chars": 612,
+  "links": [],
+  "text": "In perimeter: administration operators' portal, beneficiaries' area, evaluators/auditors' area, public section, procedures → projects → finance → documents → reporting → controls, plus an adapter for institutional systems. Out of the first baseline: replacement of accounting/protocol/conservation systems, AI-only automated decisions, a separate enterprise data warehouse, and a native mobile app.\n\nActors span back office (system administrator, institution administrator, operator, instructor), dedicated areas (evaluator, controller, auditor), the beneficiaries area, the public section, and external systems."
+ },
+ {
+  "i": 31,
+  "document": "ianus-platform",
+  "section": "Lifecycle",
+  "chars": 503,
+  "links": [],
+  "text": "The end-to-end life cycle runs: configure program/notice → beneficiary submits an application with an unalterable receipt → investigation → confidential evaluation and ranking → concession creates the project and dossier → implementation (progress, commitments, liquidations, payments, SAL, variations) → reports and payment requests → controls → closure → reporting and open data. Minimal states are defined for notices, applications, evaluations, projects, financial statements, checks, and documents."
+ },
+ {
+  "i": 32,
+  "document": "ianus-platform",
+  "section": "Architecture context",
+  "chars": 289,
+  "links": [
+   "modular-monolith-architecture",
+   "module-catalog",
+   "data-model",
+   "identity-and-access-management",
+   "document-pipeline",
+   "puc-rgs-regis-snm-connector"
+  ],
+  "text": "Built as a [[modular-monolith-architecture]] with a [[module-catalog]] of 9 modules, a versioned [[data-model]], direct [[identity-and-access-management]] (SPID/CIE + local IAM), a [[document-pipeline]] with object storage, and the [[puc-rgs-regis-snm-connector]] for RGS interoperability."
+ },
+ {
+  "i": 33,
+  "document": "ianus-platform",
+  "section": "Specified in",
+  "chars": 80,
+  "links": [
+   "ianus-technical-operational-project-document"
+  ],
+  "text": "[[ianus-technical-operational-project-document]] — executive specification v1.3."
+ },
+ {
+  "i": 34,
+  "document": "ianus-technical-operational-project-document",
+  "section": "Introduction",
+  "chars": 165,
+  "links": [],
+  "text": "Executive specification and implementation guide (v1.3, 2026-09-07) that turns the IANUS functional analysis into an implementable baseline for the development team."
+ },
+ {
+  "i": 35,
+  "document": "ianus-technical-operational-project-document",
+  "section": "What this document is",
+  "chars": 850,
+  "links": [
+   "ianus-platform"
+  ],
+  "text": "The **IANUS Technical-Operational Project Document v1.3** is the initiation specification for the development of [[ianus-platform]]. It defines scope, architecture, modules, data, APIs, processes, non-functional requirements, the implementation plan, and acceptance criteria. It is the initial reference for structuring the repository, backlog, database, API, interfaces, tests, and environments — any deviation must be recorded as an Architecture Decision Record (ADR).\n\n- **Version:** 1.3 — **Date:** 2026-09-07 — **State:** executive specification, ready to start development.\n- **Recipients:** Product Owners, Analysts, Architects, Developers, DBAs, QA, DevOps, Security.\n- **Sources:** IANUS Analysis, Ianus(4).docx demo, PUC RGS 4.0, Validation Controls 1.0, Vademecum 1.0, SNM Application Protocol 1.2 + attachments, Context Tables April 2025."
+ },
+ {
+  "i": 36,
+  "document": "ianus-technical-operational-project-document",
+  "section": "Confirmed decisions",
+  "chars": 579,
+  "links": [
+   "instance-isolation",
+   "document-pipeline",
+   "identity-and-access-management",
+   "puc-rgs-regis-snm-connector"
+  ],
+  "text": "Six assumptions were closed as confirmed client decisions (DEC-CNF-01 … 06):\n\n- One dedicated instance per institution ([[instance-isolation]]).\n- Modules/workflows/parameters vary by instance and program/fund.\n- Files in object storage; SQL Server holds metadata, references, hashes ([[document-pipeline]]).\n- SPID/CIE implemented directly; local IAM email/password + MFA also available ([[identity-and-access-management]]).\n- Power BI optional; native dashboards built from code.\n- PUC specifications as attached; credentials per organization ([[puc-rgs-regis-snm-connector]])."
+ },
+ {
+  "i": 37,
+  "document": "ianus-technical-operational-project-document",
+  "section": "Architecture and scope",
+  "chars": 334,
+  "links": [
+   "modular-monolith-architecture",
+   "module-catalog",
+   "data-model"
+  ],
+  "text": "- [[modular-monolith-architecture]] — ADR-001 baseline: modular monolith, single SQL Server DB per instance, logical schemas.\n- [[module-catalog]] — 9 modules across `core`, `procedures`, `projects`, `documents`, `controls`, `integrations`, `reporting`, `audit`.\n- [[data-model]] — physical SQL Server specification and table catalog."
+ },
+ {
+  "i": 38,
+  "document": "ianus-technical-operational-project-document",
+  "section": "Delivery and status",
+  "chars": 557,
+  "links": [],
+  "text": "The document closes with an 8-phase implementation plan (Sprint 0 discovery → go-live), an initial epic backlog (EP-01 … EP-15), a recommended first vertical slice, 12 open Sprint 0 decisions (DEC-01 … DEC-12), and 12 risks (RSK-01 … RSK-12).\n\n**Baseline outcome:** the team can launch Sprint 0, the IAM module, and the PUC connector with simulators and attached contracts. Before committing release dates or activating real endpoints, at least DEC-01, DEC-03, DEC-04, DEC-06, DEC-10, DEC-11 must be closed and instance credentials/accreditations available."
+ },
+ {
+  "i": 39,
+  "document": "ianus-technical-operational-project-document",
+  "section": "Related sources",
+  "chars": 124,
+  "links": [
+   "ianus-modular-analysis-and-implementation-plan"
+  ],
+  "text": "- [[ianus-modular-analysis-and-implementation-plan]] — the modular analysis and implementation plan this document builds on."
+ },
+ {
+  "i": 40,
+  "document": "identity-and-access-management",
+  "section": "Introduction",
+  "chars": 209,
+  "links": [],
+  "text": "IANUS implements its own IAM: direct SPID/CIE federation plus a local email/password + TOTP channel, combined with RBAC and resource-context controls (instance, program, project, state, segregation of duties)."
+ },
+ {
+  "i": 41,
+  "document": "identity-and-access-management",
+  "section": "Confirmed approach",
+  "chars": 520,
+  "links": [],
+  "text": "- SPID/CIE are implemented **directly** (Service Provider / Relying Party), with no mandatory external broker (SEC-IAM-001).\n- A local IAM login with verified email, password and second TOTP factor (authenticator app) is available for enabled profiles (SEC-IAM-005).\n- Passwords stored only as adaptive, salted, versioned hashes; TOTP secrets encrypted with an external key; recovery codes stored as hashes.\n- Sessions and refresh tokens are revocable, rotated and protected; timeouts differentiated by risk and channel."
+ },
+ {
+  "i": 42,
+  "document": "identity-and-access-management",
+  "section": "Authorization model",
+  "chars": 609,
+  "links": [],
+  "text": "RBAC (role → permission) is combined with resource context checks: instance/administration, program, project, task/delegation, process status, and segregation of duties (SoD). Possessing a permission is not enough — the backend verifies context on every command and protected query.\n\nInitial authorization matrix: System Administrator, Institution Administrator, Implementation Manager, Instructor, Evaluator, Controller, Beneficiary, Auditor/Reviewer — each with default scope, key actions, and prohibitions (e.g. evaluators cannot see others' opinions until permitted; auditors have read-only consultation)."
+ },
+ {
+  "i": 43,
+  "document": "identity-and-access-management",
+  "section": "IAM components",
+  "chars": 464,
+  "links": [],
+  "text": "Internal Federation Gateway (SPID SAML + CIE OIDC Federation), Local Identity Service, MFA Service, Session Service, Authorization Service, Provisioning/Linking (ExternalIdentityLink with conservative matching; no automatic merging on tax-code collisions).\n\nDirect SPID flow publishes SP metadata/AuthnRequest/ACS; CIE uses OIDC Federation with state/nonce/PKCE and trust chains. Both validate signature, issuer, audience, replay, and normalize minimal attributes."
+ },
+ {
+  "i": 44,
+  "document": "identity-and-access-management",
+  "section": "Compliance",
+  "chars": 177,
+  "links": [],
+  "text": "Beyond implementation, go-live requires SPID/CIE conformance testing, instance accreditation, privacy verification, penetration testing, and approval of authentication policies."
+ },
+ {
+  "i": 45,
+  "document": "identity-and-access-management",
+  "section": "Related",
+  "chars": 161,
+  "links": [
+   "instance-isolation",
+   "data-model",
+   "ianus-platform",
+   "ianus-technical-operational-project-document"
+  ],
+  "text": "- [[instance-isolation]] (per-instance identity resources), [[data-model]] (`iam.*` tables), [[ianus-platform]], [[ianus-technical-operational-project-document]]"
+ },
+ {
+  "i": 46,
+  "document": "instance-isolation",
+  "section": "Introduction",
+  "chars": 187,
+  "links": [],
+  "text": "Each institution gets its own dedicated IANUS instance — separate application, database, storage, keys, secrets and configurations — so there is no shared tenancy at runtime (DEC-CNF-01)."
+ },
+ {
+  "i": 47,
+  "document": "instance-isolation",
+  "section": "The decision",
+  "chars": 303,
+  "links": [],
+  "text": "DEC-CNF-01 (confirmed): each institution has its own IANUS instance with separate application, database, storage, keys, secrets and configurations; no shared tenants at runtime. Related confirmed decisions: files in object storage with DB metadata (DEC-CNF-03), direct SPID/CIE + local IAM (DEC-CNF-04)."
+ },
+ {
+  "i": 48,
+  "document": "instance-isolation",
+  "section": "Enforcement points",
+  "chars": 613,
+  "links": [
+   "data-model",
+   "identity-and-access-management",
+   "document-pipeline",
+   "modular-monolith-architecture"
+  ],
+  "text": "- **Data model:** every table carries `AdministrationInstanceId`, injected from the authenticated context, never the request body; FKs include implicit ownership; no application super-tenant for global queries ([[data-model]]).\n- **Database:** one dedicated SQL Server database per instance; operational tables never shared.\n- **IAM:** audience/issuer/host binding; off-instance tokens rejected ([[identity-and-access-management]]).\n- **Storage:** per-instance containers/prefixes ([[document-pipeline]]).\n- **Deployment:** provider-independent, dedicated resources per entity ([[modular-monolith-architecture]])."
+ },
+ {
+  "i": 49,
+  "document": "instance-isolation",
+  "section": "Security and testing",
+  "chars": 456,
+  "links": [],
+  "text": "Instance isolation appears in the initial threat model (\"access to incorrect instance\" — host binding, audience/issuer, dedicated resources, no tenant selection) and as a mandatory E2E scenario: incorrect host/audience, off-instance token, search, download, export and BI must all fail. Risk RSK-04 (isolation or permission violation) is mitigated by dedicated resources, audience/issuer/host binding, centralized policies, negative testing and pentesting."
+ },
+ {
+  "i": 50,
+  "document": "instance-isolation",
+  "section": "Related",
+  "chars": 122,
+  "links": [
+   "ianus-platform",
+   "data-model",
+   "identity-and-access-management",
+   "ianus-technical-operational-project-document"
+  ],
+  "text": "- [[ianus-platform]], [[data-model]], [[identity-and-access-management]], [[ianus-technical-operational-project-document]]"
+ },
+ {
+  "i": 51,
+  "document": "modular-monolith-architecture",
+  "section": "Introduction",
+  "chars": 212,
+  "links": [],
+  "text": "IANUS's confirmed architectural baseline (ADR-001) is a modular monolith: one backend application, one SQL Server database per instance, organised into logical schemas with explicit code boundaries and contracts."
+ },
+ {
+  "i": 52,
+  "document": "modular-monolith-architecture",
+  "section": "ADR-001 — Modular monolith",
+  "chars": 842,
+  "links": [],
+  "text": "The demo document mentioned microservices; the subsequent modular analysis proposed a modular monolith, and that is treated as authoritative. The demo \"gateway\" is interpreted as an API facade/reverse proxy entry, not evidence of physical distribution.\n\nRules:\n\n- each module has its own namespace/project, application services, contracts, tables, and tests;\n- dependencies oriented towards Core and public contracts; circular references prohibited;\n- no direct writes to another module's tables — use authorised services/commands or read contracts;\n- transactional unit local to the module; cross-functional processes coordinated with application/outbox events;\n- stateless horizontal application replication; separable worker for asynchronous loads;\n- a module is extractable into an autonomous service only when justified by measured need."
+ },
+ {
+  "i": 53,
+  "document": "modular-monolith-architecture",
+  "section": "Why a single database",
+  "chars": 523,
+  "links": [
+   "ianus-modular-analysis-and-implementation-plan"
+  ],
+  "text": "Per [[ianus-modular-analysis-and-implementation-plan]] §2.2: cross-module reports must link procedures, projects, beneficiaries, expenses, SALs and controls, which is simpler and more reliable in one database; related transactions share a single data context; installation, backups, migrations and maintenance stay less complex. Logical separation is preserved via schemas, naming, permissions and services. Separate databases would only be justified for modules distributed, scaled or managed as fully standalone products."
+ },
+ {
+  "i": 54,
+  "document": "modular-monolith-architecture",
+  "section": "Technology baseline",
+  "chars": 818,
+  "links": [],
+  "text": "| Level | Baseline |\n|---|---|\n| Frontend | Angular 22, TypeScript, standalone components, Signals/RxJS |\n| Backend | ASP.NET Core .NET 10 LTS, C#, EF Core 10 |\n| Database | SQL Server 2022 (or agency-supported version); one DB per instance, schemas per domain |\n| API | REST/JSON, OpenAPI 3.x, `/api/v1` |\n| Identity | IANUS IAM: direct SPID/CIE + local OIDC/OAuth 2.0 accounts |\n| Files | S3-compatible object storage or Azure Blob; antivirus + hashing |\n| Asynchrony | Background worker + queue/outbox; broker only if necessary |\n| Observability | Structured logs, metrics, distributed tracing, alerts; correlation ID end-to-end |\n| BI/Search | Native dashboards; Power BI and semantic search optional |\n\nSupport notes: .NET 10 is LTS (supported to 2028-11-14); Angular 22 in active support as of the document date."
+ },
+ {
+  "i": 55,
+  "document": "modular-monolith-architecture",
+  "section": "Mandatory principles",
+  "chars": 268,
+  "links": [],
+  "text": "API-first; secure by default; instance isolation by construction; configuration over customization; auditability by design; idempotent send operations and connectors; logical deletion and historization; accessibility and privacy integrated into the Definition of Done."
+ },
+ {
+  "i": 56,
+  "document": "modular-monolith-architecture",
+  "section": "Repository structure",
+  "chars": 303,
+  "links": [],
+  "text": "`src/Ianus.Api` (composition), `src/Ianus.Worker` (async jobs), `src/BuildingBlocks` (minimal kernel, audit contracts, outbox), `src/Modules/*` (Domain/Application/Infrastructure/Contracts per module), `src/WebApp` (Angular), plus `tests/`, `deploy/`, `docs/`. BuildingBlocks must stay small and stable."
+ },
+ {
+  "i": 57,
+  "document": "modular-monolith-architecture",
+  "section": "Related",
+  "chars": 158,
+  "links": [
+   "module-catalog",
+   "data-model",
+   "ianus-platform",
+   "ianus-technical-operational-project-document",
+   "ianus-modular-analysis-and-implementation-plan"
+  ],
+  "text": "- [[module-catalog]], [[data-model]], [[ianus-platform]], [[ianus-technical-operational-project-document]], [[ianus-modular-analysis-and-implementation-plan]]"
+ },
+ {
+  "i": 58,
+  "document": "module-catalog",
+  "section": "Introduction",
+  "chars": 652,
+  "links": [
+   "ianus-modular-analysis-and-implementation-plan",
+   "audit-trail",
+   "ianus-technical-operational-project-document"
+  ],
+  "text": "The IANUS solution is organised into 9 modules with explicit schemas, responsibilities and code boundaries, whose activation is configurable per instance and program/fund.\n\nThe earlier [[ianus-modular-analysis-and-implementation-plan]] listed the modules slightly differently: it kept **Public section of beneficiaries** and **Reporting & BI** as two separate optional modules, and treated audit as a cross-functional Core service ([[audit-trail]]) rather than a module. This consolidated table, with **Audit & Operations** promoted to a mandatory module and Reporting/Public merged, reflects the later [[ianus-technical-operational-project-document]]."
+ },
+ {
+  "i": 59,
+  "document": "module-catalog",
+  "section": "Modules",
+  "chars": 1115,
+  "links": [],
+  "text": "| Module | Schema | Type | Primary responsibility |\n|---|---|---|---|\n| Core & Configuration | `core` | Mandatory | Instance, users, roles, permissions, modules, dictionaries, programs |\n| Procedures & Applications | `procedures` | Functional | Notices, applications, investigations, evaluations, rankings, concessions |\n| Projects & Monitoring | `projects` | Functional | Projects, indicators, schedule, finance, SAL, variants, closure |\n| Digital file | (application view) | Functional | Authorised aggregation of project information |\n| Document Management | `documents` | Transversal | Files, versions, metadata, signatures, protocol, preservation, search |\n| Controls | `controls` | Functional | Checklists, samples, inspections, findings, irregularities, corrective actions |\n| Integrations | `integrations` | Transversal | Adapters, requests/responses, mapping, retry, reconciliation |\n| Reporting & Public | `reporting` | Functional | Native dashboards, KPIs, extractions, optional BI, open data |\n| Audit & Operations | `audit` | Mandatory | Audit trail, access log, transmission log, secure consultation |"
+ },
+ {
+  "i": 60,
+  "document": "module-catalog",
+  "section": "Activation / deactivation",
+  "chars": 641,
+  "links": [],
+  "text": "Module enabling is configured per instance (and optionally per program/fund). The backend is authoritative — it checks feature flags, licensing/configuration and permissions on every request; the frontend projects the same state for menus and routing but is not a security barrier.\n\n- Deactivation: hide menus/routes, reject APIs with a consistent code, suspend module jobs and connectors.\n- Existing data is kept but not modifiable; access only per explicit policy.\n- Reactivation restores configurations and data without ad hoc manual migrations.\n- Reports omit inactive-module indicators and declare the data scope; the change is audited."
+ },
+ {
+  "i": 61,
+  "document": "module-catalog",
+  "section": "Modularity principles",
+  "chars": 711,
+  "links": [
+   "ianus-modular-analysis-and-implementation-plan",
+   "audit-trail"
+  ],
+  "text": "From [[ianus-modular-analysis-and-implementation-plan]] §3, each module must:\n\n- have clearly identifiable screens, APIs, services and tables;\n- expose only the necessary data/operations to other modules through defined contracts;\n- not require an optional module to complete its core functions;\n- check enablement in both frontend and backend;\n- hide menus and routes when disabled, while still protecting APIs from direct access;\n- not delete data on deactivation — only make it temporarily unusable;\n- record relevant transactions in the common [[audit-trail]].\n\n**Basic rule:** deactivating a module removes its functionality, menus and API but must not error remaining active modules or delete stored data."
+ },
+ {
+  "i": 62,
+  "document": "module-catalog",
+  "section": "Dependency matrix",
+  "chars": 769,
+  "links": [],
+  "text": "Mandatory dependencies and behaviour when a module is disabled (source §5):\n\n| Module | Mandatory dependencies | Behaviour when disabled |\n|---|---|---|\n| Core | None | Not deactivatable |\n| Procedures | Core | No calls/applications; Projects enterable manually |\n| Projects | Core | Dossiers and reports show no implementation data |\n| Digital file | Core, Projects | Data available per module, without the aggregate view |\n| Document management | Core | A minimum attachment service remains |\n| Controls | Core | Operations continue without checklists/verifications |\n| Integrations | Core | Manual insertion/transmission where permitted |\n| Public section | Core | No external publications |\n| Reporting | Core | Data in modules, but no cross-functional dashboards |"
+ },
+ {
+  "i": 63,
+  "document": "module-catalog",
+  "section": "Related",
+  "chars": 222,
+  "links": [
+   "modular-monolith-architecture",
+   "ianus-platform",
+   "data-model",
+   "ianus-technical-operational-project-document",
+   "ianus-modular-analysis-and-implementation-plan"
+  ],
+  "text": "- [[modular-monolith-architecture]] (boundaries and repo layout), [[ianus-platform]], [[data-model]] (schema per module), [[ianus-technical-operational-project-document]], [[ianus-modular-analysis-and-implementation-plan]]"
+ },
+ {
+  "i": 64,
+  "document": "module-creation-checklist",
+  "section": "Introduction",
+  "chars": 289,
+  "links": [
+   "ianus-modular-analysis-and-implementation-plan",
+   "module-catalog",
+   "modular-monolith-architecture",
+   "data-model"
+  ],
+  "text": "Checklist of everything a developer must put in place to create a new IANUS module — the consolidated answer to \"what is needed to create a module\", drawn from the [[ianus-modular-analysis-and-implementation-plan]], [[module-catalog]], [[modular-monolith-architecture]] and [[data-model]]."
+ },
+ {
+  "i": 65,
+  "document": "module-creation-checklist",
+  "section": "What a module is",
+  "chars": 487,
+  "links": [
+   "module-catalog"
+  ],
+  "text": "A module is a self-contained slice of the modular monolith with its own **schema**, **type**, and **primary responsibility** (see [[module-catalog]]): a `core` module is mandatory and not deactivatable; functional modules carry a business domain; transversal modules (documents, integrations) serve the others. The Projects & Monitoring module is the canonical functional example — schema `projects`, responsibility for projects, indicators, schedule, finance, SAL, variants and closure."
+ },
+ {
+  "i": 66,
+  "document": "module-creation-checklist",
+  "section": "Architecture and code boundaries",
+  "chars": 525,
+  "links": [
+   "modular-monolith-architecture"
+  ],
+  "text": "Per [[modular-monolith-architecture]] (ADR-001), each module must have:\n\n- its own namespace/project under `src/Modules/*` laid out as `Domain/Application/Infrastructure/Contracts`;\n- application services and **public contracts** (interfaces/DTOs), oriented toward Core;\n- **no circular references** and no direct writes to another module's tables — only authorised services/commands or read contracts;\n- a transactional unit local to the module, with cross-module coordination via application/outbox events;\n- its own tests."
+ },
+ {
+  "i": 67,
+  "document": "module-creation-checklist",
+  "section": "Modularity principles to satisfy",
+  "chars": 508,
+  "links": [
+   "module-catalog",
+   "audit-trail"
+  ],
+  "text": "From [[module-catalog]] §3, a module must: expose only necessary data/operations through defined contracts; not require an optional module to complete its core functions; check enablement in **both** frontend and backend; hide menus/routes when disabled while still protecting APIs; never delete data on deactivation; record relevant transactions in the [[audit-trail]]. The basic rule: deactivating a module removes functionality, menus and API but must not error other active modules or delete stored data."
+ },
+ {
+  "i": 68,
+  "document": "module-creation-checklist",
+  "section": "Data layer",
+  "chars": 688,
+  "links": [
+   "data-model"
+  ],
+  "text": "Each module gets a schema in the single SQL Server database (see [[data-model]]):\n\n- tables carrying the common columns — `Id` (uniqueidentifier), `AdministrationInstanceId`, `CreatedAtUtc`/`CreatedBy`, optional audit/delete columns, `RowVersion` concurrency token;\n- ownership injected from the authenticated context, never the request body; FKs with implicit ownership and `ON DELETE NO ACTION`;\n- domain types (`decimal(19.4)` money, filtered unique indexes, check constraints);\n- a minimum table set per schema (e.g. `projects.Project/ProjectParty/Milestone/ProjectIndicator`);\n- forward-only, idempotent migrations applied by a pipeline identity (no `Database.Migrate()` at startup)."
+ },
+ {
+  "i": 69,
+  "document": "module-creation-checklist",
+  "section": "Frontend",
+  "chars": 191,
+  "links": [
+   "ianus-modular-analysis-and-implementation-plan"
+  ],
+  "text": "Angular feature module with its own routes/menus/components, plus enable and permission guards so the module state mirrors the backend ([[ianus-modular-analysis-and-implementation-plan]] §5)."
+ },
+ {
+  "i": 70,
+  "document": "module-creation-checklist",
+  "section": "Backend",
+  "chars": 270,
+  "links": [
+   "module-catalog"
+  ],
+  "text": ".NET services and controllers for the module, with enablement/feature-flag checks on every request — the backend is authoritative ([[module-catalog]]). On deactivation it rejects APIs with a consistent code, suspends jobs/connectors, and keeps data read-only per policy."
+ },
+ {
+  "i": 71,
+  "document": "module-creation-checklist",
+  "section": "Audit and observability",
+  "chars": 316,
+  "links": [
+   "audit-trail",
+   "data-model"
+  ],
+  "text": "Every operation is recorded in the cross-functional [[audit-trail]] — identity, time, context, operation, variation, outcome, origin — with the `AuditEvent` saved in the same transaction as the aggregate change and `OutboxMessage` ([[data-model]]). Logging, metrics, tracing and correlation IDs complete the picture."
+ },
+ {
+  "i": 72,
+  "document": "module-creation-checklist",
+  "section": "Quality gates",
+  "chars": 217,
+  "links": [
+   "ianus-modular-analysis-and-implementation-plan"
+  ],
+  "text": "Unit, integration, authorization and **deactivation** tests, plus acceptance criteria — deactivation behaviour is a first-class test target, not an afterthought ([[ianus-modular-analysis-and-implementation-plan]] §5)."
+ },
+ {
+  "i": 73,
+  "document": "module-creation-checklist",
+  "section": "Related",
+  "chars": 190,
+  "links": [
+   "module-catalog",
+   "modular-monolith-architecture",
+   "data-model",
+   "audit-trail",
+   "ianus-modular-analysis-and-implementation-plan",
+   "ianus-technical-operational-project-document"
+  ],
+  "text": "- [[module-catalog]], [[modular-monolith-architecture]], [[data-model]], [[audit-trail]], [[ianus-modular-analysis-and-implementation-plan]], [[ianus-technical-operational-project-document]]"
+ },
+ {
+  "i": 74,
+  "document": "puc-rgs-regis-snm-connector",
+  "section": "Introduction",
+  "chars": 223,
+  "links": [],
+  "text": "The PUC RGS / ReGiS-SNM connector is the executive integration for exchanging project-monitoring data with the RGS system, based on the attached PUC 4.0 baseline, SNM Application Protocol 1.2, and April 2025 context tables."
+ },
+ {
+  "i": 75,
+  "document": "puc-rgs-regis-snm-connector",
+  "section": "What it exchanges",
+  "chars": 405,
+  "links": [],
+  "text": "PUC 4.0 describes **54 information structures** organised into procedures/agreements (PA), project master data (AP), indicators (IN), subjects (SC), finance (FN), procurement processes (PR), transfers (TR), and financial instruments (SF). IANUS keeps an internal domain model and an explicit versioned mapping to each structure — application entities never depend directly on the external protocol's DTOs."
+ },
+ {
+  "i": 76,
+  "document": "puc-rgs-regis-snm-connector",
+  "section": "Channels and services",
+  "chars": 685,
+  "links": [],
+  "text": "- **Bulk SOAP** — S01 Mass Processing (ZPOI49a), S02 Mass Data Reading (ZPOI66), S03 Outcome Control (ZPOI63).\n- **Timely REST** — S04 Project details, S05 Agreements, S06 Activation procedures, S07 Partnership projects, S08 Foreign entities, S09 Transfers, S10 Outcomes (Basic Auth, versioned OpenAPI client).\n- **Mass files** — T01 input and T02 outcome; deterministic writer/parser generated from the field catalog.\n- **Context tables** — April 2025 snapshot, 72 TC sheets; staged import, validation, atomic publishing, caching, rollback.\n- **Controls** — 55 validation codes (Reject or Warning), run by a local versioned pre-validation engine; the SNM result remains authoritative."
+ },
+ {
+  "i": 77,
+  "document": "puc-rgs-regis-snm-connector",
+  "section": "Transmission flow",
+  "chars": 502,
+  "links": [],
+  "text": "Select projects/structures and lock a snapshot → local pre-validation (blocking Rejects stop sending; Warnings require acknowledgement) → generate T01 deterministically with hashes → send S01 → poll S03 with backoff → download/normalize T02 → reconcile accepted/rejected records → corrections create a new linked transmission. States run Draft → ValidationFailed → Ready → Sending → AcceptedForProcessing → Polling → OutcomeAvailable → Completed(WithWarnings) / Rejected / TechnicalFailure / Cancelled."
+ },
+ {
+  "i": 78,
+  "document": "puc-rgs-regis-snm-connector",
+  "section": "Key rules (INT-PUC-*)",
+  "chars": 377,
+  "links": [],
+  "text": "Per-instance, per-environment profiles (Local/Dev/Test/UAT/Prod); credentials/certificates only as secret references (rotation without rebuild); versioned mappings, schemas, context tables and rules; PucTransmission/PucBatch with CorrelationID and payload hashes; idempotent polling and downloading; a console for errors by project/structure/field with authorized resubmission."
+ },
+ {
+  "i": 79,
+  "document": "puc-rgs-regis-snm-connector",
+  "section": "Related",
+  "chars": 228,
+  "links": [
+   "ianus-platform",
+   "modular-monolith-architecture",
+   "data-model",
+   "ianus-technical-operational-project-document"
+  ],
+  "text": "- [[ianus-platform]], [[modular-monolith-architecture]] (adapter pattern: stable interface, outbox/inbox, retry/circuit breaker), [[data-model]] (`integrations.*` and PUC tables), [[ianus-technical-operational-project-document]]"
+ }
+]

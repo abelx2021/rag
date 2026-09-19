@@ -1,0 +1,1069 @@
+{
+ "rows": [
+  {
+   "id": "d01",
+   "type": "direct",
+   "absent": false,
+   "q": "How does IANUS send monitoring data to RGS?",
+   "expect": [
+    "puc-rgs-regis-snm-connector::Transmission flow"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [10, 3, 9]}",
+   "indices": [
+    10,
+    3,
+    9
+   ],
+   "n_candidates": 15,
+   "tokens": 2033,
+   "merged_hit": true,
+   "delivered": [
+    "puc-rgs-regis-snm-connector::Transmission flow",
+    "puc-rgs-regis-snm-connector::Introduction",
+    "puc-rgs-regis-snm-connector::What it exchanges"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "ianus-platform"
+  },
+  {
+   "id": "d02",
+   "type": "direct",
+   "absent": false,
+   "q": "What is the object key format used for stored files?",
+   "expect": [
+    "document-pipeline::Data / file separation"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 4, 6]}",
+   "indices": [
+    0,
+    4,
+    6
+   ],
+   "n_candidates": 17,
+   "tokens": 2560,
+   "merged_hit": true,
+   "delivered": [
+    "document-pipeline::Data / file separation",
+    "document-pipeline::Pipeline",
+    "document-pipeline::Versions, replacement, retention"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "document-pipeline"
+  },
+  {
+   "id": "d03",
+   "type": "direct",
+   "absent": false,
+   "q": "What are the steps of the document upload pipeline?",
+   "expect": [
+    "document-pipeline::Pipeline"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 3, 1]}",
+   "indices": [
+    0,
+    3,
+    1
+   ],
+   "n_candidates": 17,
+   "tokens": 2558,
+   "merged_hit": true,
+   "delivered": [
+    "document-pipeline::Pipeline",
+    "document-pipeline::Introduction",
+    "document-pipeline::Data / file separation"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "document-pipeline"
+  },
+  {
+   "id": "d04",
+   "type": "direct",
+   "absent": false,
+   "q": "Which schemas make up the IANUS database?",
+   "expect": [
+    "data-model::Organization"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [2, 1, 10]}",
+   "indices": [
+    2,
+    1,
+    10
+   ],
+   "n_candidates": 16,
+   "tokens": 2249,
+   "merged_hit": true,
+   "delivered": [
+    "data-model::Organization",
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+    "data-model::Table catalog"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "data-model"
+  },
+  {
+   "id": "d05",
+   "type": "direct",
+   "absent": false,
+   "q": "What precision are monetary amounts stored with?",
+   "expect": [
+    "data-model::Types, constraints, indices"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 5, 7]}",
+   "indices": [
+    0,
+    5,
+    7
+   ],
+   "n_candidates": 16,
+   "tokens": 2586,
+   "merged_hit": true,
+   "delivered": [
+    "data-model::Types, constraints, indices",
+    "data-model::Introduction",
+    "data-model::Organization"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "data-model"
+  },
+  {
+   "id": "d06",
+   "type": "direct",
+   "absent": false,
+   "q": "What is the technology baseline for frontend and backend?",
+   "expect": [
+    "modular-monolith-architecture::Technology baseline"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 4, 10]}",
+   "indices": [
+    0,
+    4,
+    10
+   ],
+   "n_candidates": 16,
+   "tokens": 2427,
+   "merged_hit": true,
+   "delivered": [
+    "modular-monolith-architecture::Technology baseline",
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+    "modular-monolith-architecture::ADR-001 — Modular monolith"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "modular-monolith-architecture"
+  },
+  {
+   "id": "d07",
+   "type": "direct",
+   "absent": false,
+   "q": "What is the repository structure of the solution?",
+   "expect": [
+    "modular-monolith-architecture::Repository structure"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 3, 4]}",
+   "indices": [
+    0,
+    3,
+    4
+   ],
+   "n_candidates": 16,
+   "tokens": 2826,
+   "merged_hit": true,
+   "delivered": [
+    "modular-monolith-architecture::Repository structure",
+    "module-creation-checklist::Architecture and code boundaries",
+    "modular-monolith-architecture::ADR-001 — Modular monolith"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "modular-monolith-architecture"
+  },
+  {
+   "id": "d08",
+   "type": "direct",
+   "absent": false,
+   "q": "What happens when a module is deactivated?",
+   "expect": [
+    "module-catalog::Activation / deactivation"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 1, 4]}",
+   "indices": [
+    0,
+    1,
+    4
+   ],
+   "n_candidates": 19,
+   "tokens": 2842,
+   "merged_hit": true,
+   "delivered": [
+    "module-catalog::Activation / deactivation",
+    "module-creation-checklist::Modularity principles to satisfy",
+    "module-creation-checklist::Backend"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "module-catalog"
+  },
+  {
+   "id": "d09",
+   "type": "direct",
+   "absent": false,
+   "q": "Which module dependencies are mandatory?",
+   "expect": [
+    "module-catalog::Dependency matrix"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 5, 4]}",
+   "indices": [
+    0,
+    5,
+    4
+   ],
+   "n_candidates": 17,
+   "tokens": 2849,
+   "merged_hit": true,
+   "delivered": [
+    "module-catalog::Dependency matrix",
+    "ianus-modular-analysis-and-implementation-plan::Modules",
+    "module-catalog::Modules"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "module-catalog"
+  },
+  {
+   "id": "d10",
+   "type": "direct",
+   "absent": false,
+   "q": "What does the technical audit trail record?",
+   "expect": [
+    "audit-trail::Technical audit trail"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 2, 1]}",
+   "indices": [
+    0,
+    2,
+    1
+   ],
+   "n_candidates": 17,
+   "tokens": 2454,
+   "merged_hit": true,
+   "delivered": [
+    "audit-trail::Technical audit trail",
+    "module-creation-checklist::Audit and observability",
+    "audit-trail::Introduction"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "audit-trail"
+  },
+  {
+   "id": "d11",
+   "type": "direct",
+   "absent": false,
+   "q": "How are document versions replaced and retained?",
+   "expect": [
+    "document-pipeline::Versions, replacement, retention"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 3, 2]}",
+   "indices": [
+    0,
+    3,
+    2
+   ],
+   "n_candidates": 16,
+   "tokens": 2561,
+   "merged_hit": true,
+   "delivered": [
+    "document-pipeline::Versions, replacement, retention",
+    "document-pipeline::Pipeline",
+    "document-pipeline::Data / file separation"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "document-pipeline"
+  },
+  {
+   "id": "d12",
+   "type": "direct",
+   "absent": false,
+   "q": "Which IAM components does IANUS use?",
+   "expect": [
+    "identity-and-access-management::IAM components"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [2, 0, 16]}",
+   "indices": [
+    2,
+    0,
+    16
+   ],
+   "n_candidates": 18,
+   "tokens": 2361,
+   "merged_hit": true,
+   "delivered": [
+    "identity-and-access-management::IAM components",
+    "identity-and-access-management::Introduction",
+    "ianus-technical-operational-project-document::Confirmed decisions"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "identity-and-access-management"
+  },
+  {
+   "id": "d13",
+   "type": "direct",
+   "absent": false,
+   "q": "How is instance isolation enforced?",
+   "expect": [
+    "instance-isolation::Enforcement points"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 12, 1]}",
+   "indices": [
+    0,
+    12,
+    1
+   ],
+   "n_candidates": 15,
+   "tokens": 1850,
+   "merged_hit": true,
+   "delivered": [
+    "instance-isolation::Enforcement points",
+    "data-model::Common columns and ownership",
+    "instance-isolation::Security and testing"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "instance-isolation"
+  },
+  {
+   "id": "d14",
+   "type": "direct",
+   "absent": false,
+   "q": "What are the nine IANUS modules?",
+   "expect": [
+    "module-catalog::Modules"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [11, 1, 0]}",
+   "indices": [
+    11,
+    1,
+    0
+   ],
+   "n_candidates": 14,
+   "tokens": 2060,
+   "merged_hit": true,
+   "delivered": [
+    "module-catalog::Modules",
+    "ianus-modular-analysis-and-implementation-plan::Modules",
+    "module-catalog::Introduction"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "module-catalog"
+  },
+  {
+   "id": "d15",
+   "type": "direct",
+   "absent": false,
+   "q": "What tables exist in each database schema?",
+   "expect": [
+    "data-model::Table catalog"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 2, 8]}",
+   "indices": [
+    0,
+    2,
+    8
+   ],
+   "n_candidates": 16,
+   "tokens": 2436,
+   "merged_hit": true,
+   "delivered": [
+    "data-model::Table catalog",
+    "data-model::Organization",
+    "module-catalog::Modules"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "data-model"
+  },
+  {
+   "id": "d16",
+   "type": "direct",
+   "absent": false,
+   "q": "What is the architectural decision ADR-001?",
+   "expect": [
+    "modular-monolith-architecture::ADR-001 — Modular monolith"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 1, 3]}",
+   "indices": [
+    0,
+    1,
+    3
+   ],
+   "n_candidates": 16,
+   "tokens": 2589,
+   "merged_hit": true,
+   "delivered": [
+    "modular-monolith-architecture::ADR-001 — Modular monolith",
+    "modular-monolith-architecture::Introduction",
+    "module-creation-checklist::Architecture and code boundaries"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "modular-monolith-architecture"
+  },
+  {
+   "id": "s01",
+   "type": "synthesis",
+   "absent": false,
+   "q": "What must a new module do about enablement checks in the frontend?",
+   "expect": [
+    "module-catalog::Modularity principles",
+    "module-creation-checklist::Frontend",
+    "module-creation-checklist::Modularity principles to satisfy"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [1, 4, 5]}",
+   "indices": [
+    1,
+    4,
+    5
+   ],
+   "n_candidates": 16,
+   "tokens": 2553,
+   "merged_hit": true,
+   "delivered": [
+    "module-creation-checklist::Modularity principles to satisfy",
+    "module-catalog::Modularity principles",
+    "ianus-modular-analysis-and-implementation-plan::Modularity principles"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "module-creation-checklist"
+  },
+  {
+   "id": "s02",
+   "type": "synthesis",
+   "absent": false,
+   "q": "What are the quality gates a new module must pass?",
+   "expect": [
+    "module-creation-checklist::Quality gates"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 1, 3]}",
+   "indices": [
+    0,
+    1,
+    3
+   ],
+   "n_candidates": 16,
+   "tokens": 2493,
+   "merged_hit": true,
+   "delivered": [
+    "module-creation-checklist::Quality gates",
+    "module-creation-checklist::Modularity principles to satisfy",
+    "module-catalog::Modularity principles"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "module-creation-checklist"
+  },
+  {
+   "id": "s03",
+   "type": "synthesis",
+   "absent": false,
+   "q": "What arguments ruled out a microservices architecture?",
+   "expect": [
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+    "modular-monolith-architecture::ADR-001 — Modular monolith"
+   ],
+   "state": "ABSTAIN",
+   "reason": null,
+   "raw": "{\"answerable\": false, \"indices\": []}",
+   "indices": [],
+   "n_candidates": 17,
+   "tokens": 2589,
+   "merged_hit": true,
+   "delivered": [],
+   "delivered_expected": false,
+   "delivered_pos": null,
+   "seed": "modular-monolith-architecture"
+  },
+  {
+   "id": "s04",
+   "type": "synthesis",
+   "absent": false,
+   "q": "Why does IANUS use a single database instead of one per module?",
+   "expect": [
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+    "modular-monolith-architecture::Why a single database"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 1, 8]}",
+   "indices": [
+    0,
+    1,
+    8
+   ],
+   "n_candidates": 15,
+   "tokens": 2185,
+   "merged_hit": true,
+   "delivered": [
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+    "modular-monolith-architecture::Why a single database",
+    "ianus-modular-analysis-and-implementation-plan::Architectural proposal"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "ianus-modular-analysis-and-implementation-plan"
+  },
+  {
+   "id": "s05",
+   "type": "synthesis",
+   "absent": false,
+   "q": "What data layer rules must a new module follow?",
+   "expect": [
+    "module-creation-checklist::Data layer"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 13, 9]}",
+   "indices": [
+    0,
+    13,
+    9
+   ],
+   "n_candidates": 14,
+   "tokens": 2529,
+   "merged_hit": true,
+   "delivered": [
+    "module-creation-checklist::Data layer",
+    "data-model::Transactions and migrations",
+    "data-model::Types, constraints, indices"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "module-creation-checklist"
+  },
+  {
+   "id": "s06",
+   "type": "synthesis",
+   "absent": false,
+   "q": "What are the mandatory architectural principles?",
+   "expect": [
+    "modular-monolith-architecture::Mandatory principles"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 4, 1]}",
+   "indices": [
+    0,
+    4,
+    1
+   ],
+   "n_candidates": 17,
+   "tokens": 3020,
+   "merged_hit": true,
+   "delivered": [
+    "modular-monolith-architecture::Mandatory principles",
+    "modular-monolith-architecture::ADR-001 — Modular monolith",
+    "module-creation-checklist::Architecture and code boundaries"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "modular-monolith-architecture"
+  },
+  {
+   "id": "i01",
+   "type": "id",
+   "absent": false,
+   "q": "What does INT-PUC-006 require?",
+   "expect": [
+    "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)"
+   ],
+   "state": "ABSTAIN",
+   "reason": null,
+   "raw": "{\"answerable\": false, \"indices\": []}",
+   "indices": [],
+   "n_candidates": 14,
+   "tokens": 2403,
+   "merged_hit": true,
+   "delivered": [],
+   "delivered_expected": false,
+   "delivered_pos": null,
+   "seed": "ianus-technical-operational-project-document"
+  },
+  {
+   "id": "i02",
+   "type": "id",
+   "absent": false,
+   "q": "What is SEC-IAM-005?",
+   "expect": [
+    "identity-and-access-management::Confirmed approach"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 2, 10]}",
+   "indices": [
+    0,
+    2,
+    10
+   ],
+   "n_candidates": 17,
+   "tokens": 2475,
+   "merged_hit": true,
+   "delivered": [
+    "identity-and-access-management::Confirmed approach",
+    "identity-and-access-management::Introduction",
+    "ianus-technical-operational-project-document::Confirmed decisions"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "identity-and-access-management"
+  },
+  {
+   "id": "i03",
+   "type": "id",
+   "absent": false,
+   "q": "What is risk RSK-04 and how is it mitigated?",
+   "expect": [
+    "instance-isolation::Security and testing"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 10, 11]}",
+   "indices": [
+    0,
+    10,
+    11
+   ],
+   "n_candidates": 18,
+   "tokens": 2799,
+   "merged_hit": true,
+   "delivered": [
+    "instance-isolation::Security and testing",
+    "instance-isolation::Enforcement points",
+    "instance-isolation::The decision"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "instance-isolation"
+  },
+  {
+   "id": "i04",
+   "type": "id",
+   "absent": false,
+   "q": "Which Sprint 0 decisions must be closed before committing release dates?",
+   "expect": [
+    "ianus-technical-operational-project-document::Delivery and status"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 1, 8]}",
+   "indices": [
+    0,
+    1,
+    8
+   ],
+   "n_candidates": 14,
+   "tokens": 2262,
+   "merged_hit": true,
+   "delivered": [
+    "ianus-technical-operational-project-document::Delivery and status",
+    "ianus-technical-operational-project-document::Confirmed decisions",
+    "instance-isolation::The decision"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "ianus-technical-operational-project-document"
+  },
+  {
+   "id": "i05",
+   "type": "id",
+   "absent": false,
+   "q": "What is DEC-CNF-01?",
+   "expect": [
+    "ianus-technical-operational-project-document::Confirmed decisions",
+    "instance-isolation::The decision"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 1, 2]}",
+   "indices": [
+    0,
+    1,
+    2
+   ],
+   "n_candidates": 17,
+   "tokens": 2668,
+   "merged_hit": true,
+   "delivered": [
+    "instance-isolation::The decision",
+    "instance-isolation::Introduction",
+    "ianus-technical-operational-project-document::Confirmed decisions"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "instance-isolation"
+  },
+  {
+   "id": "i06",
+   "type": "id",
+   "absent": false,
+   "q": "How many epics does the initial backlog contain?",
+   "expect": [
+    "ianus-technical-operational-project-document::Delivery and status"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 3, 10]}",
+   "indices": [
+    0,
+    3,
+    10
+   ],
+   "n_candidates": 16,
+   "tokens": 2973,
+   "merged_hit": true,
+   "delivered": [
+    "ianus-technical-operational-project-document::Delivery and status",
+    "ianus-technical-operational-project-document::What this document is",
+    "ianus-technical-operational-project-document::Confirmed decisions"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "ianus-technical-operational-project-document"
+  },
+  {
+   "id": "n01",
+   "type": "numeric",
+   "absent": false,
+   "q": "How many validation codes can a pre-validation return and who is authoritative?",
+   "expect": [
+    "puc-rgs-regis-snm-connector::Channels and services",
+    "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 1, 10]}",
+   "indices": [
+    0,
+    1,
+    10
+   ],
+   "n_candidates": 18,
+   "tokens": 3409,
+   "merged_hit": true,
+   "delivered": [
+    "puc-rgs-regis-snm-connector::Channels and services",
+    "puc-rgs-regis-snm-connector::Transmission flow",
+    "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "puc-rgs-regis-snm-connector"
+  },
+  {
+   "id": "n02",
+   "type": "numeric",
+   "absent": false,
+   "q": "How many TC sheets are in the context table snapshot?",
+   "expect": [
+    "puc-rgs-regis-snm-connector::Channels and services"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [1, 13, 6]}",
+   "indices": [
+    1,
+    13,
+    6
+   ],
+   "n_candidates": 17,
+   "tokens": 3001,
+   "merged_hit": true,
+   "delivered": [
+    "puc-rgs-regis-snm-connector::Channels and services",
+    "ianus-technical-operational-project-document::What this document is",
+    "puc-rgs-regis-snm-connector::What it exchanges"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "data-model"
+  },
+  {
+   "id": "n03",
+   "type": "numeric",
+   "absent": false,
+   "q": "How many information structures does PUC 4.0 describe?",
+   "expect": [
+    "puc-rgs-regis-snm-connector::What it exchanges"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 4, 7]}",
+   "indices": [
+    0,
+    4,
+    7
+   ],
+   "n_candidates": 16,
+   "tokens": 2560,
+   "merged_hit": true,
+   "delivered": [
+    "puc-rgs-regis-snm-connector::What it exchanges",
+    "puc-rgs-regis-snm-connector::Channels and services",
+    "puc-rgs-regis-snm-connector::Transmission flow"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "puc-rgs-regis-snm-connector"
+  },
+  {
+   "id": "n04",
+   "type": "numeric",
+   "absent": false,
+   "q": "What decimal precision is used for percentages and quantities?",
+   "expect": [
+    "data-model::Types, constraints, indices"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 4, 5]}",
+   "indices": [
+    0,
+    4,
+    5
+   ],
+   "n_candidates": 18,
+   "tokens": 2983,
+   "merged_hit": true,
+   "delivered": [
+    "data-model::Types, constraints, indices",
+    "module-creation-checklist::Data layer",
+    "data-model::Organization"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "data-model"
+  },
+  {
+   "id": "n05",
+   "type": "numeric",
+   "absent": false,
+   "q": "How many phases does the implementation plan have?",
+   "expect": [
+    "ianus-technical-operational-project-document::Delivery and status"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 4, 3]}",
+   "indices": [
+    0,
+    4,
+    3
+   ],
+   "n_candidates": 13,
+   "tokens": 1968,
+   "merged_hit": true,
+   "delivered": [
+    "ianus-technical-operational-project-document::Delivery and status",
+    "ianus-modular-analysis-and-implementation-plan::What this document is",
+    "ianus-modular-analysis-and-implementation-plan::Introduction"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "ianus-technical-operational-project-document"
+  },
+  {
+   "id": "o01",
+   "type": "obscure",
+   "absent": false,
+   "q": "Which documents is the IANUS platform specified in?",
+   "expect": [
+    "ianus-platform::Specified in"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 1, 9]}",
+   "indices": [
+    0,
+    1,
+    9
+   ],
+   "n_candidates": 17,
+   "tokens": 1945,
+   "merged_hit": true,
+   "delivered": [
+    "ianus-platform::Specified in",
+    "ianus-technical-operational-project-document::What this document is",
+    "ianus-technical-operational-project-document::Introduction"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 1,
+   "seed": "ianus-platform"
+  },
+  {
+   "id": "o02",
+   "type": "obscure",
+   "absent": false,
+   "q": "What does the vault say about functional audit as opposed to technical audit?",
+   "expect": [
+    "audit-trail::Functional audit",
+    "audit-trail::Technical audit trail"
+   ],
+   "state": "ANSWERABLE",
+   "reason": null,
+   "raw": "{\"answerable\": true, \"indices\": [0, 1, 3]}",
+   "indices": [
+    0,
+    1,
+    3
+   ],
+   "n_candidates": 16,
+   "tokens": 2396,
+   "merged_hit": true,
+   "delivered": [
+    "ianus-modular-analysis-and-implementation-plan::Audit",
+    "audit-trail::Introduction",
+    "audit-trail::Functional audit"
+   ],
+   "delivered_expected": true,
+   "delivered_pos": 3,
+   "seed": "ianus-modular-analysis-and-implementation-plan"
+  },
+  {
+   "id": "o03",
+   "type": "obscure",
+   "absent": false,
+   "q": "What is the digital file (fascicolo di progetto) in IANUS?",
+   "expect": [
+    "ianus-modular-analysis-and-implementation-plan::Modules",
+    "module-catalog::Modules"
+   ],
+   "state": "ABSTAIN",
+   "reason": null,
+   "raw": "{\"answerable\": false, \"indices\": []}",
+   "indices": [],
+   "n_candidates": 15,
+   "tokens": 2079,
+   "merged_hit": true,
+   "delivered": [],
+   "delivered_expected": false,
+   "delivered_pos": null,
+   "seed": "ianus-modular-analysis-and-implementation-plan"
+  },
+  {
+   "id": "x01",
+   "type": "absent",
+   "absent": true,
+   "q": "What is the production SLA and uptime target?",
+   "expect": [],
+   "state": "ABSTAIN",
+   "reason": null,
+   "raw": "{\"answerable\": false, \"indices\": []}",
+   "indices": [],
+   "n_candidates": 15,
+   "tokens": 2913,
+   "merged_hit": false,
+   "delivered": [],
+   "delivered_expected": false,
+   "delivered_pos": null,
+   "seed": "module-creation-checklist"
+  },
+  {
+   "id": "x02",
+   "type": "absent",
+   "absent": true,
+   "q": "How do I configure the SMTP mail server?",
+   "expect": [],
+   "state": "ABSTAIN",
+   "reason": null,
+   "raw": "{\"answerable\": false, \"indices\": []}",
+   "indices": [],
+   "n_candidates": 17,
+   "tokens": 2850,
+   "merged_hit": false,
+   "delivered": [],
+   "delivered_expected": false,
+   "delivered_pos": null,
+   "seed": "puc-rgs-regis-snm-connector"
+  },
+  {
+   "id": "x03",
+   "type": "absent",
+   "absent": true,
+   "q": "What are the statuses a project can have in IANUS?",
+   "expect": [],
+   "state": "ABSTAIN",
+   "reason": null,
+   "raw": "{\"answerable\": false, \"indices\": []}",
+   "indices": [],
+   "n_candidates": 13,
+   "tokens": 2061,
+   "merged_hit": false,
+   "delivered": [],
+   "delivered_expected": false,
+   "delivered_pos": null,
+   "seed": "ianus-modular-analysis-and-implementation-plan"
+  },
+  {
+   "id": "x04",
+   "type": "absent",
+   "absent": true,
+   "q": "Who is the product owner for IANUS?",
+   "expect": [],
+   "state": "ABSTAIN",
+   "reason": null,
+   "raw": "{\"answerable\": false, \"indices\": []}",
+   "indices": [],
+   "n_candidates": 14,
+   "tokens": 1993,
+   "merged_hit": false,
+   "delivered": [],
+   "delivered_expected": false,
+   "delivered_pos": null,
+   "seed": "ianus-technical-operational-project-document"
+  }
+ ],
+ "tokens": 100348
+}
