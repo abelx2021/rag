@@ -1,0 +1,422 @@
+[
+ {
+  "id": "d01",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "puc-rgs-regis-snm-connector::Transmission flow",
+   "puc-rgs-regis-snm-connector::Introduction",
+   "puc-rgs-regis-snm-connector::What it exchanges"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d02",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "document-pipeline::Data / file separation",
+   "document-pipeline::Pipeline",
+   "instance-isolation::Enforcement points"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d03",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "document-pipeline::Pipeline",
+   "document-pipeline::Introduction",
+   "document-pipeline::Data / file separation"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d04",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "data-model::Organization",
+   "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Proposed schema organisation",
+   "ianus-technical-operational-project-document::Architecture and scope"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d05",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "data-model::Types, constraints, indices",
+   "data-model::Introduction",
+   "data-model::Organization"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d06",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "modular-monolith-architecture::Technology baseline",
+   "ianus-modular-analysis-and-implementation-plan::Architectural proposal",
+   "ianus-modular-analysis-and-implementation-plan::Common technical activities"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d07",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "modular-monolith-architecture::Repository structure",
+   "module-creation-checklist::Architecture and code boundaries",
+   "modular-monolith-architecture::ADR-001 — Modular monolith"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d08",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "module-catalog::Activation / deactivation",
+   "module-creation-checklist::Modularity principles to satisfy",
+   "module-creation-checklist::Backend"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d09",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "module-catalog::Dependency matrix",
+   "ianus-modular-analysis-and-implementation-plan::Modules",
+   "module-catalog::Modules"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d10",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "audit-trail::Technical audit trail",
+   "module-creation-checklist::Audit and observability",
+   "audit-trail::Introduction"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d11",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "document-pipeline::Versions, replacement, retention",
+   "document-pipeline::Pipeline",
+   "document-pipeline::Data / file separation"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d12",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "identity-and-access-management::IAM components",
+   "identity-and-access-management::Introduction",
+   "ianus-platform::Architecture context"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d13",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "instance-isolation::Enforcement points",
+   "data-model::Common columns and ownership",
+   "instance-isolation::Introduction"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d14",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "module-catalog::Modules",
+   "ianus-modular-analysis-and-implementation-plan::Modules",
+   "module-catalog::Introduction"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d15",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "data-model::Table catalog",
+   "data-model::Organization",
+   "module-catalog::Modules"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "d16",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "modular-monolith-architecture::ADR-001 — Modular monolith",
+   "modular-monolith-architecture::Introduction",
+   "module-creation-checklist::Architecture and code boundaries"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "s01",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "module-creation-checklist::Modularity principles to satisfy",
+   "module-catalog::Modularity principles",
+   "ianus-modular-analysis-and-implementation-plan::Modularity principles"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "s02",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "module-creation-checklist::Quality gates",
+   "module-creation-checklist::Modularity principles to satisfy",
+   "module-creation-checklist::Architecture and code boundaries"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "s03",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+   "modular-monolith-architecture::Why a single database",
+   "ianus-modular-analysis-and-implementation-plan::Architectural proposal"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "s04",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "modular-monolith-architecture::Why a single database",
+   "ianus-modular-analysis-and-implementation-plan::Architectural proposal > Why a single database",
+   "ianus-modular-analysis-and-implementation-plan::Architectural proposal"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "s05",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "module-creation-checklist::Data layer",
+   "data-model::Transactions and migrations",
+   "data-model::Types, constraints, indices"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "s06",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "modular-monolith-architecture::Mandatory principles",
+   "modular-monolith-architecture::ADR-001 — Modular monolith",
+   "module-creation-checklist::Architecture and code boundaries"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "i02",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "identity-and-access-management::Confirmed approach",
+   "identity-and-access-management::Introduction",
+   "ianus-technical-operational-project-document::Confirmed decisions"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "i03",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "instance-isolation::Security and testing",
+   "instance-isolation::Enforcement points",
+   "instance-isolation::The decision"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "i04",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "ianus-technical-operational-project-document::Delivery and status",
+   "ianus-technical-operational-project-document::Confirmed decisions",
+   "identity-and-access-management::Compliance"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "i05",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "instance-isolation::The decision",
+   "instance-isolation::Introduction",
+   "ianus-technical-operational-project-document::Confirmed decisions"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "i06",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "ianus-technical-operational-project-document::Delivery and status",
+   "ianus-technical-operational-project-document::What this document is",
+   "ianus-technical-operational-project-document::Confirmed decisions"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "n01",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "puc-rgs-regis-snm-connector::Channels and services",
+   "puc-rgs-regis-snm-connector::Transmission flow",
+   "puc-rgs-regis-snm-connector::Key rules (INT-PUC-*)"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "n02",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "puc-rgs-regis-snm-connector::Channels and services",
+   "ianus-technical-operational-project-document::What this document is",
+   "puc-rgs-regis-snm-connector::What it exchanges"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "n03",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "puc-rgs-regis-snm-connector::What it exchanges",
+   "puc-rgs-regis-snm-connector::Channels and services",
+   "puc-rgs-regis-snm-connector::Transmission flow"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "n04",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "data-model::Types, constraints, indices",
+   "module-creation-checklist::Data layer",
+   "data-model::Organization"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "n05",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "ianus-technical-operational-project-document::Delivery and status",
+   "ianus-modular-analysis-and-implementation-plan::What this document is",
+   "ianus-modular-analysis-and-implementation-plan::Introduction"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "o01",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "ianus-platform::Specified in",
+   "ianus-technical-operational-project-document::What this document is",
+   "ianus-technical-operational-project-document::Introduction"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "o02",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "audit-trail::Introduction",
+   "audit-trail::Functional audit",
+   "ianus-modular-analysis-and-implementation-plan::Audit"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ },
+ {
+  "id": "o03",
+  "state": "ANSWERABLE",
+  "delivered_expected": true,
+  "delivered": [
+   "ianus-platform::Purpose and objectives",
+   "ianus-modular-analysis-and-implementation-plan::Modules",
+   "document-pipeline::Introduction"
+  ],
+  "was": true,
+  "was_state": "ANSWERABLE"
+ }
+]

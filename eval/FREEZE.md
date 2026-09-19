@@ -61,11 +61,39 @@ the o03 revert and the i01 reason, is recorded in that file.
    top-2 passages were identical 40/40; the third slot differed on 3/40
    (d06, s01, i04). State agreement is the property that must hold; do not tune
    the gate on ranking order, and do not treat one run as a contract.
-4. **Supersession is not handled.** d04 still ranks the superseded 8-schema
-   list above the current 9-schema one. The corpus records supersession in
-   prose and nothing in the pipeline reads it. This is the next workstream.
+4. **Supersession: metadata authored, ranking NOT active.** Scoped `authority` fields
+   now exist on two pages for the `database-schema-organization` topic (see
+   AUTHORITY_EXPERIMENT.md), and no code path reads them. The v1–v5 ordering failure
+   does not reproduce at this configuration: all three frozen passes deliver the
+   current 10-schema claim at #1. No adjustment is promoted; V2 (partition) is
+   validated as non-destructive should a real conflict ever reproduce.
 5. **raw/ is not indexed** (`WIKI` globs `wiki/**` only), so vault-gap
    questions have no answer path.
+
+## Authority layer state
+
+    Retrieval + answerability
+            FROZEN
+               |-- vector retrieval (VECTOR_K=10)
+               |-- sibling expansion (SIBLING_K=3, benchmark-fitted)
+               |-- graph expansion (GRAPH_K=10)
+               |-- deterministic identifier pre-gate
+               +-- joint-sufficiency reranker (FINAL_K=3, strict validation)
+
+    Authority metadata
+            AUTHORED
+               +-- database-schema-organization relationship (data-model <->
+                   ianus-modular-analysis-and-implementation-plan)
+
+    Authority ranking
+            NOT ACTIVE
+               |-- V1 annotation  REJECTED  (destabilised the gate; lost s03)
+               |-- V3 both        REJECTED  (carries V1's risk, +1.9% tokens)
+               +-- V2 partition   VALIDATED as non-destructive, but not justified
+                                  by any currently reproducing failure
+
+Promotion rule: an authority mechanism enters this pipeline only when a conflict
+failure actually reproduces in a run. "Safe on this benchmark" is not "needed".
 
 ## Re-running
 
